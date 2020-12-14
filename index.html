@@ -11,33 +11,110 @@
       bottom: 0;
       left: 0;
     }
+    .country:hover {
+      fill: #666a67;
+    }
+    .hidden {
+      display: none;
+    }
+    div.tooltip {
+      color: #222;
+      background-color: #fff;
+      padding: 1.5em;
+      text-shadow: #f5f5f5 0 1px 0;
+      border-radius: 2px;
+      opacity: 0.9;
+      position: absolute;
+    }
+    .container {
+      display: flex;
+    }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <div id="map"></div>
+    <div id="infos">
+      <h1>Ici on affichera les infos sur le pays sélectionné</h1>
+    </div>
+  </div>
   <script>
-    var width = 1920,
-      height = 1080;
+    var width = 1152,
+      height = 1152;
 
     var svg = d3
-      .select("body")
+      .select("#map")
       .append("svg")
       .attr("width", width)
       .attr("height", height);
 
+    //var zoom = d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", move);
+
+    var tooltip = d3
+      .select("body")
+      .append("div")
+      .attr("class", "hidden tooltip");
+
+    // On rajoute un groupe englobant toute la visualisation pour plus tard
     var g = svg.append("g");
 
-    projection = d3.geoNaturalEarth1().center([-100, 50]).scale(300);
+    projection = d3
+      .geoNaturalEarth1()
+      .translate([width / 2, height / 2])
+      .scale(225);
 
     var path = d3.geoPath().projection(projection);
 
-    d3.json("world.geojson").then(function (jsondata) {
-      g.selectAll("path")
-        .data(jsondata.features)
-        .enter()
-        .append("path")
-        .attr("fill", "#ccc")
-        .attr("d", path);
+    d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
+      console.log(csvdata);
+      d3.json("world.geojson").then(function (jsondata) {
+        g.selectAll("path")
+          .data(jsondata.features)
+          .enter()
+          .append("path")
+          /*.on("click", function (event, d) {
+                .center([event.x, event.y]);
+              })*/
+          .on("mousemove", function (event, d) {
+            tooltip
+              .classed("hidden", false)
+              // on positionne le tooltip en fonction
+              // de la position de la souris
+              .attr(
+                "style",
+                "left:" + (event.x + 15) + "px; top:" + (event.y - 15) + "px"
+              )
+              .html("<div>" + d.properties.name + "</div>");
+          })
+          .on("mouseout", function (event, d) {
+            tooltip.classed("hidden", true);
+          })
+          .on("click", function (event, d) {
+            // TODO: remplacer par la fct pour afficher les détails/autres graphes
+            document.getElementById("infos").innerHTML =
+              "<h2>Selected country : " +
+              d.properties.name +
+              "</h2><ul id='speciesList'></ul>";
+            for (var i = 0; i < csvdata.length; i++) {
+              var country = csvdata[i].FormerDistribution;
+              var speciesName = csvdata[i].CommonName;
+              if (speciesName == "Unknown") {
+                speciesName = csvdata[i].Species;
+              }
+              //if (d.properties.name == country) {
+              if (country.indexOf(d.properties.name) > -1) {
+                var species = document.createElement("LI");
+                species.innerHTML = speciesName;
+                document.getElementById("speciesList").appendChild(species);
+              }
+            }
+          })
+          .attr("fill", "#ccc")
+          .attr("class", "country")
+          .attr("d", path);
+      });
     });
   </script>
 </body>
+
