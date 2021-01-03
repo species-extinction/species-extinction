@@ -12,7 +12,7 @@
       left: 0;
     }
     .country:hover {
-      fill: #666a67;
+      fill: #00004c;
     }
     .hidden {
       display: none;
@@ -59,6 +59,7 @@
     // On rajoute un groupe englobant toute la visualisation pour plus tard
     var g = svg.append("g");
 
+    // Carte du monde
     projection = d3
       .geoNaturalEarth1()
       .translate([width / 2, height / 2])
@@ -66,16 +67,54 @@
 
     var path = d3.geoPath().projection(projection);
 
+    // Range et Domain pour la coloration de la carte
+    var color = d3
+      .scaleQuantize()
+      .range([
+        "#ffffcc",
+        "#ffff7f",
+        "#ffff00",
+        "#ffbf7f",
+        "#ffb266",
+        "#ff8000",
+        "#ff4c4c",
+        "#ff0000",
+        "#7f0000"
+      ])
+      .domain([1, 50]);
+
+    // On lit le fichier csv
     d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
-      console.log(csvdata);
+      // On lit le fichier json
       d3.json("world.geojson").then(function (jsondata) {
+        jsondata.features.forEach((e) => {
+          e.properties.nbspecies = 0;
+          e.properties.speciesList = [];
+        });
+        // On parcourt le csv et on récupère le pays et le nom de l'espèce de la ligne courante
+        for (var i = 0; i < csvdata.length; i++) {
+          var country = csvdata[i].FormerDistribution;
+          var speciesName = csvdata[i].CommonName;
+          // Certaines espèces n'ont pas de nom commun donc on prend le nom scientifique
+          if (speciesName == "Unknown") {
+            speciesName = csvdata[i].Species;
+          }
+          // On parcourt le json
+          for (var j = 0; j < jsondata.features.length; j++) {
+            // Si le pays dans le json est contenu dans celui dans la ligne actuelle du csv
+            if (country.indexOf(jsondata.features[j].properties.name) > -1) {
+              // On incrémente le nombre d'espèces disparues provenant de ce pays.
+              jsondata.features[j].properties.nbspecies++;
+              // On ajoute l'espèce à la liste des espèces disparues de ce pays
+              jsondata.features[j].properties.speciesList.push(speciesName);
+            }
+          }
+        }
+
         g.selectAll("path")
           .data(jsondata.features)
           .enter()
           .append("path")
-          /*.on("click", function (event, d) {
-                .center([event.x, event.y]);
-              })*/
           .on("mousemove", function (event, d) {
             tooltip
               .classed("hidden", false)
@@ -85,7 +124,14 @@
                 "style",
                 "left:" + (event.x + 15) + "px; top:" + (event.y - 15) + "px"
               )
-              .html("<div>" + d.properties.name + "</div>");
+              // Le tooltip contient le nom du pays et son nombre d'espèces disparues
+              .html(
+                "<div>Country : " +
+                  d.properties.name +
+                  "<br />Species extinct : " +
+                  d.properties.nbspecies +
+                  "</div>"
+              );
           })
           .on("mouseout", function (event, d) {
             tooltip.classed("hidden", true);
@@ -95,22 +141,20 @@
             document.getElementById("infos").innerHTML =
               "<h2>Selected country : " +
               d.properties.name +
-              "</h2><ul id='speciesList'></ul>";
-            for (var i = 0; i < csvdata.length; i++) {
-              var country = csvdata[i].FormerDistribution;
-              var speciesName = csvdata[i].CommonName;
-              if (speciesName == "Unknown") {
-                speciesName = csvdata[i].Species;
-              }
-              //if (d.properties.name == country) {
-              if (country.indexOf(d.properties.name) > -1) {
-                var species = document.createElement("LI");
-                species.innerHTML = speciesName;
-                document.getElementById("speciesList").appendChild(species);
-              }
+              "</h2><ul id='speciesList'></ul><h3>Number of species extinct in this country : " +
+              d.properties.nbspecies +
+              "</h3>";
+          })
+          // On colore la carte en fonction du nombre d'espèces disparues dans chaque pays
+          .attr("fill", function (d) {
+            var nbspecies = d.properties.nbspecies;
+            if (nbspecies > 0) {
+              return color(nbspecies);
+            } else {
+              // si pas de valeur alors en gris
+              return "#C0C0C0";
             }
           })
-          .attr("fill", "#ccc")
           .attr("class", "country")
           .attr("d", path);
       });
