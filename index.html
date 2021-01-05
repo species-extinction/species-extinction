@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8" />
   <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -36,7 +37,11 @@
   <div class="container">
     <div id="map"></div>
     <div id="infos">
-      <h1>Ici on affichera les infos sur le pays sélectionné</h1>
+      <div id="generalInfos">
+        <h1>Ici on affichera les infos sur le pays sélectionné</h1>
+      </div>
+      <div id="graph1"></div>
+      <div id="graph2"></div>
     </div>
   </div>
   <script>
@@ -83,6 +88,71 @@
       ])
       .domain([1, 50]);
 
+    var pieheight = 350;
+    var piewidth = 350;
+    var piesvg = d3
+      .select("#graph1")
+      .append("svg")
+      .attr("width", piewidth)
+      .attr("height", pieheight)
+      .append("g")
+      .attr(
+        "transform",
+        "translate(" + piewidth / 2 + "," + pieheight / 2 + ")"
+      );
+
+    // Dessine le pie chart des causes d'extinctions
+    function drawPieChart(keys, values) {
+      //Pour effacer le précédent affichage
+      piesvg.selectAll("path").remove();
+      var piecolor = d3.interpolateRainbow;
+
+      // Génère le pie chart
+      var pie = d3.pie().value(function (d) {
+        return d;
+      });
+      // Génère les arcs/parties du pie chart
+      var arc = d3
+        .arc()
+        .innerRadius(0)
+        .outerRadius(pieheight / 2);
+
+      // Trace les parties du graphe
+      piesvg
+        .selectAll("arc")
+        .data(pie(values))
+        .enter()
+        .append("path")
+        .attr("d", arc)
+        .attr("fill", function (d, i) {
+          return piecolor(i / values.length);
+        })
+        .attr("stroke", "black")
+        .style("stroke-width", "1px")
+        .style("opacity", 0.8)
+        .on("mousemove", function (event, d) {
+          //console.log(d);
+          tooltip
+            .classed("hidden", false)
+            .attr(
+              "style",
+              "left:" + (event.x + 15) + "px; top:" + (event.y - 15) + "px"
+            )
+            // Le tooltip contient la cause d'extinction représentée par la partie survolée
+            // et le nombre d'espèces disparues par cette cause.
+            .html(
+              "<div><b>Cause of extinction : </b>" +
+                keys[d.index] +
+                "<br /><b>Species extincted by this cause : </b>" +
+                d.value +
+                "</div>"
+            );
+        })
+        .on("mouseout", function (event, d) {
+          tooltip.classed("hidden", true);
+        });
+    }
+
     // On lit le fichier csv
     d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
       // On lit le fichier json
@@ -90,6 +160,7 @@
         jsondata.features.forEach((e) => {
           e.properties.nbspecies = 0;
           e.properties.speciesList = [];
+          e.properties.extinctionCauses = [];
         });
         // On parcourt le csv et on récupère le pays et le nom de l'espèce de la ligne courante
         for (var i = 0; i < csvdata.length; i++) {
@@ -99,6 +170,7 @@
           if (speciesName == "Unknown") {
             speciesName = csvdata[i].Species;
           }
+          var cause = csvdata[i].CausesOfExtinction;
           // On parcourt le json
           for (var j = 0; j < jsondata.features.length; j++) {
             // Si le pays dans le json est contenu dans celui dans la ligne actuelle du csv
@@ -107,9 +179,12 @@
               jsondata.features[j].properties.nbspecies++;
               // On ajoute l'espèce à la liste des espèces disparues de ce pays
               jsondata.features[j].properties.speciesList.push(speciesName);
+              // On ajoute la cause d'extinction
+              jsondata.features[j].properties.extinctionCauses.push(cause);
             }
           }
         }
+        //console.log(jsondata);
 
         g.selectAll("path")
           .data(jsondata.features)
@@ -126,9 +201,9 @@
               )
               // Le tooltip contient le nom du pays et son nombre d'espèces disparues
               .html(
-                "<div>Country : " +
+                "<div><b>Country : </b>" +
                   d.properties.name +
-                  "<br />Species extinct : " +
+                  "<br /><b>Species extincted : </b>" +
                   d.properties.nbspecies +
                   "</div>"
               );
@@ -137,14 +212,34 @@
             tooltip.classed("hidden", true);
           })
           .on("click", function (event, d) {
-            // TODO: remplacer par la fct pour afficher les détails/autres graphes
-            document.getElementById("infos").innerHTML =
+            document.getElementById("generalInfos").innerHTML =
               "<h2>Selected country : " +
               d.properties.name +
-              "</h2><ul id='speciesList'></ul><h3>Number of species extinct in this country : " +
+              "</h2><ul id='speciesList'></ul><h3>Number of species extincted in this country : " +
               d.properties.nbspecies +
               "</h3>";
+            // TODO: Ajouter ci-dessous les fonctions pour afficher les graphes
+
+            // Compte le nombre d'occurences de chaque cause d'extinction et
+            // crée un object liant chaque cause avec son nombre d'occurence
+            var freqCauses = d.properties.extinctionCauses.reduce(function (
+              acc,
+              curr
+            ) {
+              if (typeof acc[curr] == "undefined") {
+                acc[curr] = 1;
+              } else {
+                acc[curr] += 1;
+              }
+              return acc;
+            },
+            {});
+            var keys = Object.keys(freqCauses);
+            var values = Object.values(freqCauses);
+            // Appelle la fonction qui dessine le pie chart
+            drawPieChart(keys, values);
           })
+
           // On colore la carte en fonction du nombre d'espèces disparues dans chaque pays
           .attr("fill", function (d) {
             var nbspecies = d.properties.nbspecies;
