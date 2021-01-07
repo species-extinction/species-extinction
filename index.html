@@ -12,6 +12,59 @@
       bottom: 0;
       left: 0;
     }
+
+    .container {
+      border: 2px solid #000;
+      overflow: hidden;
+    }
+
+    .container div {
+      min-height: 200px;
+      padding: 10px;
+    }
+    #map_obselete {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    #map {
+      float: left;
+      margin-right: 20px;
+      margin-top: -10%;
+      vertical-align: middle;
+      width: 80%;
+      border-right: 2px solid #000;
+    }
+
+    #infos {
+      overflow: hidden;
+      margin: 10px;
+      border: 2px dashed #ccc;
+      width: 30%;
+      min-height: 170px;
+    }
+
+    #generalInfos {
+      border: 2px dashed #ccc;
+      height: -10%;
+      margin: 0px;
+    }
+    #graph1 {
+      border: 2px dashed #ccc;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+    #graph2 {
+      border: 2px dashed #ccc;
+    }
     .country:hover {
       fill: #00004c;
     }
@@ -38,10 +91,10 @@
     <div id="map"></div>
     <div id="infos">
       <div id="generalInfos">
-        <h1>Ici on affichera les infos sur le pays sélectionné</h1>
+        <h2>Ici on affichera les infos sur le pays sélectionné</h2>
       </div>
-      <div id="graph1"></div>
       <div id="graph2"></div>
+      <div id="graph1"></div>
     </div>
   </div>
   <script>
@@ -51,8 +104,8 @@
     var svg = d3
       .select("#map")
       .append("svg")
-      .attr("width", width)
-      .attr("height", height);
+      .attr("viewBox", "0 0 1160 1160")
+      .attr("preserveAspectRatio", "xMinYMin meet");
 
     //var zoom = d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", move);
 
@@ -88,18 +141,48 @@
       ])
       .domain([1, 50]);
 
+    var countrySelected;
+
     var pieheight = 350;
     var piewidth = 350;
     var piesvg = d3
       .select("#graph1")
       .append("svg")
-      .attr("width", piewidth)
-      .attr("height", pieheight)
+      .attr("viewBox", "0 0 500 500")
+      .attr("preserveAspectRatio", "xMinYMin meet")
       .append("g")
       .attr(
         "transform",
         "translate(" + piewidth / 2 + "," + pieheight / 2 + ")"
       );
+
+    // Lolipop chart
+    var lolimargin = { top: 10, right: 20, bottom: 50, left: 100 },
+      loliwidth = 400 - lolimargin.left - lolimargin.right,
+      loliheight = 350 - lolimargin.top - lolimargin.bottom;
+
+    var lolisvg = d3
+      .select("#graph2")
+      .append("svg")
+      .attr("width", loliwidth + lolimargin.left + lolimargin.right)
+      .attr("height", loliheight + lolimargin.top + lolimargin.bottom)
+      .append("g")
+      .attr(
+        "transform",
+        "translate(" + lolimargin.left + "," + lolimargin.top + ")"
+      );
+
+    function frequencies(data) {
+      var freq = data.reduce(function (acc, curr) {
+        if (typeof acc[curr] == "undefined") {
+          acc[curr] = 1;
+        } else {
+          acc[curr] += 1;
+        }
+        return acc;
+      }, {});
+      return freq;
+    }
 
     // Dessine le pie chart des causes d'extinctions
     function drawPieChart(keys, values) {
@@ -153,6 +236,92 @@
         });
     }
 
+    function drawLoli(data) {
+      lolisvg.selectAll("line").remove();
+      lolisvg.selectAll("circle").remove();
+      lolisvg.selectAll("g").remove();
+
+      // Add X axis
+      var x = d3
+        .scaleLinear()
+        .domain([0, Math.max(...Object.values(data))])
+        .range([0, loliwidth]);
+      lolisvg
+        .append("g")
+        .attr("transform", "translate(0," + loliheight + ")")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+
+      // Y axis
+      var y = d3
+        .scaleBand()
+        .range([0, loliheight])
+        .domain(Object.keys(data))
+        .padding(1);
+      lolisvg.append("g").call(d3.axisLeft(y));
+
+      // Lines
+      lolisvg
+        .selectAll("myline")
+        .data(Object.entries(data))
+        .enter()
+        .append("line")
+        .attr("x1", x(0))
+        .attr("x2", function (d) {
+          return x(d[1]);
+        })
+        .attr("y1", function (d) {
+          return y(d[0]);
+        })
+        .attr("y2", function (d) {
+          return y(d[0]);
+        })
+        .attr("stroke", "black");
+
+      // Circles
+      lolisvg
+        .selectAll("mycircle")
+        .data(Object.entries(data))
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) {
+          return x(d[1]);
+        })
+        .attr("cy", function (d) {
+          return y(d[0]);
+        })
+        .attr("r", "4")
+        .style("fill", "#69b3a2")
+        .attr("stroke", "black")
+        .on("mousemove", function (event, d) {
+          tooltip
+            .classed("hidden", false)
+            // on positionne le tooltip en fonction
+            // de la position de la souris
+            .attr(
+              "style",
+              "left:" +
+                (event.x - loliwidth) +
+                "px; top:" +
+                (event.y - 15) +
+                "px"
+            )
+            // Le tooltip contient le nom du pays et son nombre d'espèces disparues
+            .html(
+              "<div><b>" +
+                d[0] +
+                "</b><br /><b>Number of species : </b>" +
+                d[1] +
+                "</div>"
+            );
+        })
+        .on("mouseout", function (event, d) {
+          tooltip.classed("hidden", true);
+        });
+    }
+
     // On lit le fichier csv
     d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
       // On lit le fichier json
@@ -161,6 +330,7 @@
           e.properties.nbspecies = 0;
           e.properties.speciesList = [];
           e.properties.extinctionCauses = [];
+          e.properties.habitats = [];
         });
         // On parcourt le csv et on récupère le pays et le nom de l'espèce de la ligne courante
         for (var i = 0; i < csvdata.length; i++) {
@@ -171,6 +341,7 @@
             speciesName = csvdata[i].Species;
           }
           var cause = csvdata[i].CausesOfExtinction;
+          var habitat = csvdata[i].Habitat;
           // On parcourt le json
           for (var j = 0; j < jsondata.features.length; j++) {
             // Si le pays dans le json est contenu dans celui dans la ligne actuelle du csv
@@ -181,6 +352,8 @@
               jsondata.features[j].properties.speciesList.push(speciesName);
               // On ajoute la cause d'extinction
               jsondata.features[j].properties.extinctionCauses.push(cause);
+              // On ajoute le type d'habitat
+              jsondata.features[j].properties.habitats.push(habitat);
             }
           }
         }
@@ -212,6 +385,12 @@
             tooltip.classed("hidden", true);
           })
           .on("click", function (event, d) {
+            if (countrySelected != undefined) {
+              countrySelected.attr("stroke-width", 1).attr("stroke", "#ffffff");
+            }
+            countrySelected = d3.select(this);
+            countrySelected.attr("stroke-width", 2).attr("stroke", "#00004c");
+
             document.getElementById("generalInfos").innerHTML =
               "<h2>Selected country : " +
               d.properties.name +
@@ -222,22 +401,14 @@
 
             // Compte le nombre d'occurences de chaque cause d'extinction et
             // crée un object liant chaque cause avec son nombre d'occurence
-            var freqCauses = d.properties.extinctionCauses.reduce(function (
-              acc,
-              curr
-            ) {
-              if (typeof acc[curr] == "undefined") {
-                acc[curr] = 1;
-              } else {
-                acc[curr] += 1;
-              }
-              return acc;
-            },
-            {});
+            freqCauses = frequencies(d.properties.extinctionCauses);
             var keys = Object.keys(freqCauses);
             var values = Object.values(freqCauses);
             // Appelle la fonction qui dessine le pie chart
             drawPieChart(keys, values);
+
+            freqHabitats = frequencies(d.properties.habitats);
+            drawLoli(freqHabitats);
           })
 
           // On colore la carte en fonction du nombre d'espèces disparues dans chaque pays
