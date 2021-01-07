@@ -350,8 +350,10 @@
               jsondata.features[j].properties.nbspecies++;
               // On ajoute l'espèce à la liste des espèces disparues de ce pays
               jsondata.features[j].properties.speciesList.push(speciesName);
-              // On ajoute la cause d'extinction
-              jsondata.features[j].properties.extinctionCauses.push(cause);
+              // On ajoute la cause d'extinction (seulement si elle est connue)
+              if (cause != "Unknown") {
+                jsondata.features[j].properties.extinctionCauses.push(cause);
+              }
               // On ajoute le type d'habitat
               jsondata.features[j].properties.habitats.push(habitat);
             }
