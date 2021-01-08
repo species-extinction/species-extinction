@@ -88,6 +88,8 @@
 
 <body>
   <div class="container">
+    <button type="button" onclick="changeView()">Click Me!</button>
+    <div id="courbe"></div>
     <div id="map"></div>
     <div id="infos">
       <div id="generalInfos">
@@ -98,6 +100,19 @@
     </div>
   </div>
   <script>
+    // change de vue entre la map et la courbe
+    function changeView() {
+      if (!document.getElementById("map").hidden) {
+        document.getElementById("map").hidden = true;
+        document.getElementById("infos").hidden = true;
+        document.getElementById("courbe").hidden = false;
+      } else {
+        document.getElementById("map").hidden = false;
+        document.getElementById("infos").hidden = false;
+        document.getElementById("courbe").hidden = true;
+      }
+    }
+
     var width = 1152,
       height = 1152;
 
@@ -332,10 +347,28 @@
           e.properties.extinctionCauses = [];
           e.properties.habitats = [];
         });
+
+        var data_decade = [];
+        for (var i = 0; i < 20; i++) {
+          data_decade.push({ date: 1820 + 10 * i, nb: 0 });
+        }
+
         // On parcourt le csv et on récupère le pays et le nom de l'espèce de la ligne courante
         for (var i = 0; i < csvdata.length; i++) {
           var country = csvdata[i].FormerDistribution;
           var speciesName = csvdata[i].CommonName;
+
+          // traitement de la date
+          var date = csvdata[i].EstimatedExtinctionDate;
+          date = Number(date);
+          if ((typeof date == "number", date)) {
+            // console.log(date, typeof date, Math.floor(date / 10) - 182);
+            var d = Math.floor(date / 10) - 182;
+            if (d > 0) {
+              data_decade[d].nb++;
+            }
+          }
+
           // Certaines espèces n'ont pas de nom commun donc on prend le nom scientifique
           if (speciesName == "Unknown") {
             speciesName = csvdata[i].Species;
@@ -425,8 +458,77 @@
           })
           .attr("class", "country")
           .attr("d", path);
+
+        // ================================================
+        // creer le graph qui decrit l'augmentation du nombre d'extinction au cours du temps
+
+        // set the dimensions and margins of the graph
+        var margin_c = { top: 10, right: 30, bottom: 100, left: 100 },
+          width_c = 1000 - margin_c.left - margin_c.right,
+          height_c = 500 - margin_c.top - margin_c.bottom;
+
+        // append the svg object to the body of the page
+        var svg_c = d3
+          .select("#courbe")
+          .append("svg")
+          .attr("width", width_c + margin_c.left + margin_c.right)
+          .attr("height", height_c + margin_c.top + margin_c.bottom)
+          .append("g")
+          .attr(
+            "transform",
+            "translate(" + margin_c.left + "," + margin_c.top + ")"
+          );
+
+        // Add X axis --> it is a date format
+        var x = d3
+          .scaleTime()
+          .domain(
+            d3.extent(data_decade, function (d) {
+              return d.date;
+            })
+          )
+          .range([0, width_c]);
+
+        svg_c
+          .append("g")
+          .attr("transform", "translate(0," + height_c + ")")
+          .call(d3.axisBottom(x));
+
+        // Add Y axis
+        var y = d3
+          .scaleLinear()
+          .domain([
+            0,
+            d3.max(data_decade, function (d) {
+              return d.nb;
+            })
+          ])
+          .range([height_c, 0]);
+
+        svg_c.append("g").call(d3.axisLeft(y));
+
+        // Add the area
+        svg_c
+          .append("path")
+          .datum(data_decade)
+          .attr("fill", "#cce5df")
+          .attr("stroke", "#69b3a2")
+          // .attr("stroke", "#69b3a2")
+          .attr("stroke-width", 1.5)
+          .attr(
+            "d",
+            d3
+              .area()
+              .x(function (d) {
+                return x(d.date);
+              })
+              .y0(y(0))
+              .y1(function (d) {
+                return y(d.nb);
+              })
+          );
+        document.getElementById("courbe").hidden = true;
       });
     });
   </script>
 </body>
-
