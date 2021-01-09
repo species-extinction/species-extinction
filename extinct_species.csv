@@ -158,13 +158,13 @@ CHORDATA;ACTINOPTERYGII;PERCIFORMES;PERCIDAE;Etheostoma;sellare;;Maryland Darter
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;RETROPINNIDAE;Prototroctes;oxyrhynchus;;New Zealand Grayling;New Zealand;Extinct;1923;Introduced trout and the deterioration of the freshwater habitat;Freshwater;Rivers;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;alpenae;;Longjaw Ciscoe;Canada, United States;Extinct;1975;Overfished and predation from introduced species;Freshwater;"Lake; deepwater";Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;bezola;;Bezoule;France: Lake Bourget;Extinct;1960;Unknown;Freshwater;Lake;Food source;Unknown
-CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;fera;;F�ra;France, Switzerland;Extinct;1920;Eutrophication and overfishing;Freshwater;Lake;Food source;Unknown
+CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;fera;;Féra;France, Switzerland;Extinct;1920;Eutrophication and overfishing;Freshwater;Lake;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;gutturosus;;Bodensee Kilch;Switzerland;Extinct;1972;Eutrophication and overfishing;Freshwater;Lake;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;hiemalis;;Gravenche;Switzerland;Extinct;1950;Overfishing and species introductions;Freshwater;Lake;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;johannae;;Deepwater Ciscoe;Canada, United States;Extinct;1952;Overfishing and species introductions;Freshwater;Lake;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;nigripinnis;;Blackfin Cisco;Canada, United States;Extinct;1880;Overfishing, sea lamprey predation, and introgressive hybridization;Freshwater;"Lake; deepwater";Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;oxyrinchus;;Houting;Belgium, France, Germany, Netherlands, United Kingdom;Extinct;1940;Pollution;Freshwater;Rivers;Food source;Unknown
-CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;restrictus;;F�rit, Kr�pfer;Switzerland: Lake Morat;Extinct;1885;Habitat modification;Freshwater;Lake;Food source;Unknown
+CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Coregonus;restrictus;;Férit, Kropfer;Switzerland: Lake Morat;Extinct;1885;Habitat modification;Freshwater;Lake;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Salmo;pallaryi;;Unknown;Morocco;Extinct;1930;Introduction of common carp;Freshwater;Lake;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Salvelinus ;agassizi;;Silver Trout;United States;Extinct;1930;Overfishing and species introductions;Freshwater;Lake;Food source;Unknown
 CHORDATA;ACTINOPTERYGII;SALMONIFORMES;SALMONIDAE;Salvelinus ;neocomensis;;Unknown;Switzerland;Extinct;1904;Unknown;Freshwater;Lake;Food source;Unknown
@@ -175,7 +175,7 @@ CHORDATA;ACTINOPTERYGII;SILURIFORMES;TRICHOMYCTERIDAE;Rhizosomichthys;totae;;Gre
 CHORDATA;AMPHIBIA;ANURA;ALYTIDAE;Discoglossus;nigriventer;;Hula Painted Frog;Israel;Extinct;1955;Habitat loss and modification;"Terrestrial; Freshwater";Freshwater habitats;Unknown;Medicinal properties
 CHORDATA;AMPHIBIA;ANURA;BUFONIDAE;Adenomus;kandianus;;Unknown;Sri Lanka;Extinct;1900's;Urbanisation;"Terrestrial; Freshwater";Unknown;Food source;Medicinal proporties
 CHORDATA;AMPHIBIA;ANURA;BUFONIDAE;Anaxyrus;baxteri;;Wyoming Toad;United States: Wyoming;Extinct in the wild;Unknown;Amphibian chytrid fungus and Chytridiomycosis;"Terrestrial; Freshwater";Floodplain ponds;Food source;Unknown
-CHORDATA;AMPHIBIA;ANURA;BUFONIDAE;Atelopus;ignescens;;Unknown;Ecuador: Chimborazo and Bol�var Provinces, in the Inter-Andean valleys ;Extinct;1988;Disease (chytridiomycosis), climatic change, habitat loss and the introduction of predatory non-native trout;"Terrestrial; Freshwater";Humid montane forest, humid sub-p�ramo, and p�ramo;Food source;Medicinal proporties
+CHORDATA;AMPHIBIA;ANURA;BUFONIDAE;Atelopus;ignescens;;Unknown;Ecuador: Chimborazo and Bolívar Provinces, in the Inter-Andean valleys ;Extinct;1988;Disease (chytridiomycosis), climatic change, habitat loss and the introduction of predatory non-native trout;"Terrestrial; Freshwater";Humid montane forest, humid sub-p�ramo, and p�ramo;Food source;Medicinal proporties
 CHORDATA;AMPHIBIA;ANURA;BUFONIDAE;Atelopus;longirostris;;Unknown;Ecuador;Extinct;1989;Possibly climate change, pollution and habitat loss;"Terrestrial; Freshwater";Lowland and montane tropical rainforests;Food source;Medicinal proporties
 CHORDATA;AMPHIBIA;ANURA;BUFONIDAE;Atelopus;vogli;;Unknown;Venezuela;Extinct;1933;Habitat modification to agricultural use;"Terrestrial; Freshwater";Semi-deciduous humid forest;Food source;Medicinal proporties
 CHORDATA;AMPHIBIA;ANURA;BUFONIDAE;Incilius;holdridgei;;Holdridge's Toad;Costa Rica;Extinct;1986;Disease (chytridiomycosis) and climate change;"Terrestrial; Freshwater";Lower montane forests;Food source;Medicinal proporties
@@ -211,10 +211,10 @@ CHORDATA;AMPHIBIA;ANURA;RHACOPHORIDAE;Philautus;zal;;Unknown;Sri Lanka: Ceylon;E
 CHORDATA;AMPHIBIA;ANURA;RHACOPHORIDAE;Philautus;zimmeri;;Unknown;Sri Lanka: Point de Galle, Ceylon;Extinct;1930's;Habitat loss and urbanisation;Terrestrial;Unknown;Unknown;Medicinal proporties
 CHORDATA;AMPHIBIA;CAUDATA;PLETHODONTIDAE;Plethodon ;ainsworthi;;Ainsworth's Salamander;United States;Extinct;1964;Habitat loss;"Terrestrial; Freshwater";Unknown;Food source;Unknown
 CHORDATA;AMPHIBIA;CAUDATA;SALAMANDRIDAE;Cynops;wolterstorffi;;Yunnan Lake Newt;China: Kunming Lake and the surrounding areas in Yunnan;Extinct;1979;Habitat destruction, habitat degradation, land reclamation, duck farming and introduction of exotic fish and frog species;"Terrestrial; Freshwater";Shallow lake waters and adjacent irrigation channels, ponds and marshes;Food source;Unknown
-CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Alopochen;kervazoi;;Reunion Shelduck, R�union Shelduck;R�union;Extinct;1687;Overhunting;Freshwater;Freshwater pools and streams;Food source;Unknown
+CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Alopochen;kervazoi;;Reunion Shelduck, Réunion Shelduck;Réunion;Extinct;1687;Overhunting;Freshwater;Freshwater pools and streams;Food source;Unknown
 CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Alopochen;mauritianus;;Mauritius Shelduck, Mauritian Shelduck;Mauritius;Extinct;1698;Overhunting;Freshwater;Woods and dry ponds;Food source;Unknown
 CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Anas;marecula;;Amsterdam Duck, Amsterdam Island Duck;Amsterdam Island: French Southern Territories;Extinct;1793;Overhunting;Freshwater;Marshes and pools;Food source;Unknown
-CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Anas;theodori;;Mauritius Duck, Mauritian Duck;Mauritius, R�union;Extinct;1690;Overhunting;Freshwater;Marshes and pools;Food source;Unknown
+CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Anas;theodori;;Mauritius Duck, Mauritian Duck;Mauritius, Réunion;Extinct;1690;Overhunting;Freshwater;Marshes and pools;Food source;Unknown
 CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Camptorhynchus ;labradorius;;Labrador Duck;Canada, United States;Extinct;1878;Overhunting, harvesting of eggs and decline food sources;Terrestrial;Harbours and estuaries;Food source;Unknown
 CHORDATA;AVES;ANSERIFORMES;ANATIDAE;Mergus;australis;;Auckland Islands Merganser, Auckland Island Merganser;New Zealand: Auckland Islands;Extinct;1902;Hunting and predation by introduced pigs, rats, cats and dogs;Freshwater;Inland streams and estuaries;Food source;Unknown
 CHORDATA;AVES;APODIFORMES;TROCHILIDAE;Chlorostilbon ;bracei;;Brace's Emerald;Bahamas;Extinct;1890;Habitat loss and modification;Terrestrial;Unknown;Unknown;Unknown
@@ -224,14 +224,14 @@ CHORDATA;AVES;CHARADRIIFORMES;HAEMATOPODIDAE;Haematopus ;meadewaldoi;;Canary Isl
 CHORDATA;AVES;CHARADRIIFORMES;SCOLOPACIDAE;Prosobonia ;ellisi;;White-winged Sandpiper;French Polynesia;Extinct;1700's;Predation by introduced rats;Terrestrial;Streams;Food source;Unknown
 CHORDATA;AVES;CHARADRIIFORMES;SCOLOPACIDAE;Prosobonia ;leucoptera;;Tahitian Sandpiper, Tahiti Sandpiper;French Polynesia;Extinct;1700's;Predation by introduced rats;Terrestrial;Upland streams;Food source;Unknown
 CHORDATA;AVES;CICONIIFORMES;ARDEIDAE;Ixobrychus;novaezelandiae;;Black-backed Bittern, New Zealand Bittern, New Zealand Little Bittern;Australia, New Zealand;Extinct;1890;Overhunting and introduced species;Freshwater;Inland wetlands;Food source;Unknown
-CHORDATA;AVES;CICONIIFORMES;ARDEIDAE;Nycticorax ;duboisi;;Reunion Night-heron, R�union Night-heron;R�union;Extinct;1700;Overhunting;Freshwater;Inland wetlands;Food source;Unknown
+CHORDATA;AVES;CICONIIFORMES;ARDEIDAE;Nycticorax ;duboisi;;Reunion Night-heron, Réunion Night-heron;Réunion;Extinct;1700;Overhunting;Freshwater;Inland wetlands;Food source;Unknown
 CHORDATA;AVES;CICONIIFORMES;ARDEIDAE;Nycticorax ;mauritianus;;Mauritius Night-heron;Mauritius;Extinct;1600's;Overhunting;Freshwater;Inland wetlands;Food source;Unknown
 CHORDATA;AVES;CICONIIFORMES;ARDEIDAE;Nycticorax ;megacephalus;;Rodrigues Night-heron;Mauritius;Extinct;1761;Overhunting;Freshwater;Inland wetlands;Food source;Unknown
-CHORDATA;AVES;CICONIIFORMES;THRESKIORNITHIDAE;Threskiornis ;solitarius;;Reunion Ibis, R�union Flightless Ibis, R�union Ibis, R�union Solitaire;R�union;Extinct;1700's;Overhunting;Freshwater;Inland wetlands;Food source;Unknown
+CHORDATA;AVES;CICONIIFORMES;THRESKIORNITHIDAE;Threskiornis ;solitarius;;Reunion Ibis, Réunion Flightless Ibis, Réunion Ibis, Réunion Solitaire;Réunion;Extinct;1700's;Overhunting;Freshwater;Inland wetlands;Food source;Unknown
 CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Alectroenas;nitidissima;;Mauritius Blue-pigeon;Mauritius;Extinct;1830's;Hunting and habitat loss;Terrestrial;Forests;Food source;Unknown
 CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Alectroenas;rodericana;;Rodrigues Blue-pigeon, Rodrigues Pigeon;Mauritius;Extinct;1750's;Predation by introduced rats;Terrestrial;Subtropical forest;Food source;Unknown
 CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Caloenas ;maculata;;Liverpool Pigeon;Unknown;Extinct;1500's;Overhunting;Terrestrial;Forests;Food source;Unknown
-CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Columba ;duboisi;;Reunion Pigeon, R�union Pigeon;R�union;Extinct;1700;Introduction of rats and cats, and over hunting;Terrestrial;Forests;Food source;Unknown
+CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Columba ;duboisi;;Reunion Pigeon, Réunion Pigeon;Réunion;Extinct;1700;Introduction of rats and cats, and over hunting;Terrestrial;Forests;Food source;Unknown
 CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Columba ;jouyi;;Ryukyu Pigeon, Ryukyu Wood Pigeon;Japan;Extinct;1930's;Habitat loss and over hunting;Terrestrial;Undisturbed sub-tropical forest;Food source;Unknown
 CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Columba ;versicolor;;Bonin Wood-pigeon;Japan;Extinct;1889;Deforestation, hunting, and predation by introduced rats and cats;Terrestrial;Subtropical forest;Food source;Unknown
 CHORDATA;AVES;COLUMBIFORMES;COLUMBIDAE;Dysmoropelia ;dekarchiskos;;St Helena Dove;Saint Helena;Extinct;1500's;Human disturbance;Terrestrial;Unknown;Unknown;Unknown
@@ -248,7 +248,7 @@ CHORDATA;AVES;CORACIIFORMES;UPUPIDAE;Upupa;antaios;;St Helena Hoopoe;Saint Helen
 CHORDATA;AVES;CUCULIFORMES;CUCULIDAE;Coua;delalandei;;Snail-eating Coua, Delalande's Coua;Madagascar;Extinct;1834;Deforestation, hunting, and predation by introduced rats;Terrestrial;Tropical lowland moist forest;Food source and feathers.;Unknown
 CHORDATA;AVES;CUCULIFORMES;CUCULIDAE;Nannococcyx;psix;;St Helena Cuckoo;Saint Helena;Extinct;1700's;Deforestation;Terrestrial;Temperate forest;Food source;Unknown
 CHORDATA;AVES;FALCONIFORMES;FALCONIDAE;Caracara;lutosa;;Guadalupe Caracara;Mexico;Extinct;1900;Deforestation and persecution;Terrestrial;Shrubland;Food source;Unknown
-CHORDATA;AVES;FALCONIFORMES;FALCONIDAE;Falco;buboisi;;Reunion Kestrel, R�union Kestrel;R�union;Extinct;1600's;Persecution;Terrestrial;Shrubland;Unknown;Unknown
+CHORDATA;AVES;FALCONIFORMES;FALCONIDAE;Falco;buboisi;;Reunion Kestrel, Réunion Kestrel;Réunion;Extinct;1600's;Persecution;Terrestrial;Shrubland;Unknown;Unknown
 CHORDATA;AVES;GALLIFORMES;CRACIDAE;Mitu ;mitu;;Alagoas Curassow;Brazil;Extinct in the wild;1980's;Habitat destruction and poaching;Terrestrial;Lowland primary forest;Unknown;Unknown
 CHORDATA;AVES;GALLIFORMES;PHASIANIDAE;Argusianus ;bipunctatus;;Double-banded Argus;Indonesia, Malaysia;Extinct;1800's;Hunting and habitat degradation;Terrestrial;Tropical lowland moist forest;Food source;Unknown
 CHORDATA;AVES;GALLIFORMES;PHASIANIDAE;Coturnix;novaezelandiae;;New Zealand Quail;New Zealand: Barrier Islands;Extinct;1875;Predation by dogs, cats and rats, and grazing by sheep. Diseases spread by introduced game birds;Terrestrial;Grass covered downs;Food source;Unknown
@@ -259,7 +259,7 @@ CHORDATA;AVES;GRUIFORMES;RALLIDAE;Atlantisia ;elpenor;;Ascension Crake, Ascensio
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Atlantisia ;podarces;;St Helena Crake;Saint Helena;Extinct;1502;Overhunting;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Cabalus;modestus;;Chatham Rail, Chatham Island Rail, Chatham Islands Rail;New Zealand;Extinct;1900;Predation, habitat degradation and competition with the larger Dieffenbach's Rail (Gallirallus dieffenbachii) ;Terrestrial;Scrubland;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Diaphorapteryx ;hawkinsi;;Hawkins's Rail;New Zealand;Extinct;1800's;Overhunting;Terrestrial;Temperate forest;Food source;Unknown
-CHORDATA;AVES;GRUIFORMES;RALLIDAE;Fulica;newtoni;;Mascarene Coot;Mauritius, R�union;Extinct;1693;Overhunting;Freshwater;Unknown;Unknown;Unknown
+CHORDATA;AVES;GRUIFORMES;RALLIDAE;Fulica;newtoni;;Mascarene Coot;Mauritius, Réunion;Extinct;1693;Overhunting;Freshwater;Unknown;Unknown;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Gallinula;nesiotis;;Tristan Moorhen, Tristan Gallinule;Saint Helena;Extinct;1890's;Hunting, predation by rats, cats and pigs, and habitat destruction;Terrestrial;Marshes and pools;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Gallirallus;dieffenbachii;;Dieffenbach's Rail;New Zealand;Extinct;1872;Predation by introduced rats, cats and dogs, and habitat loss;Terrestrial;Scrubland;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Gallirallus;owstoni;;Guam Rail;Guam, Northern Mariana Islands;Extinct in the wild;1987;Predation by the brown tree-snake;Terrestrial;Forest, savanna, scrub and secondary grassland;Food source;Unknown
@@ -267,7 +267,7 @@ CHORDATA;AVES;GRUIFORMES;RALLIDAE;Gallirallus;pacificus;;Tahiti Rail;French Poly
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Gallirallus;wakensis;;Wake Island Rail;United States: United States Minor Outlying Islands;Extinct;1945;Overhunting;Terrestrial;Scrubland;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Nesoclopeus;poecilopterus;;Bar-winged Rail;Fiji;Extinct;1973;Introduced cats and mongooses;Terrestrial;Forests;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Porphyrio;albus;;White Gallinule, Lord Howe Island Swamphen, Lord Howe Swamphen;Australia;Extinct;1834;Overhunting;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;AVES;GRUIFORMES;RALLIDAE;Porphyrio;coerulescens;;Reunion Gallinule, R�union Gallinule;R�union;Extinct;1730;Overhunting;Freshwater;Montane forest;Food source;Unknown
+CHORDATA;AVES;GRUIFORMES;RALLIDAE;Porphyrio;coerulescens;;Reunion Gallinule, Réunion Gallinule;Réunion;Extinct;1730;Overhunting;Freshwater;Montane forest;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Porphyrio;kukwiedei;;New Caledonia Gallinule;New Caledonia;Extinct;1800's;Overhunting;Freshwater;Unknown;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Porphyrio;mantelli;;North Island Takahe;New Zealand;Extinct;1800's;Hunting and habitat alteration;Terrestrial;Tropical high altitude grassland ;Food source;Unknown
 CHORDATA;AVES;GRUIFORMES;RALLIDAE;Porzana;astrictocarpus;;St Helena Rail;Saint Helena;Extinct;1500's;Introduced predators;Terrestrial;Unknown;Unknown;Unknown
@@ -337,13 +337,13 @@ CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Cyanoramphus;lietanus;;Raiatea Parakeet
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Cyanoramphus;zealandicus;;Black-fronted Parakeet;French Polynesia;Extinct;1800's;Habitat destruction, hunting and introduced species;Terrestrial;Forests;Food source and feathers;Unknown
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Lophopsittacus;bensoni;;Mauritius Grey Parrot;Mauritius;Extinct;1700's;Overhunting;Terrestrial;Forests;Food source and feathers;Unknown
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Lophopsittacus;mauritianus;;Broad-billed Parrot, Mauritius Parrot;Mauritius;Extinct;1600's;Overhunting;Terrestrial;Forests;Food source and feathers;Unknown
-CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Mascarinus ;mascarinus;;Mascarene Parrot;R�union;Extinct;1834;Overhunting;Terrestrial;Forests;Food source and feathers;Unknown
+CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Mascarinus ;mascarinus;;Mascarene Parrot;Réunion;Extinct;1834;Overhunting;Terrestrial;Forests;Food source and feathers;Unknown
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Necropsittacus;rodericanus;;Rodrigues Parrot;Mauritius;Extinct;1700's;Overhunting;Terrestrial;Forests;Food source and feathers;Unknown
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Nestor;productus;;Norfolk Island Kaka, Norfolk Kaka;Australia: Norfolk Island;Extinct;1800's;Overhunting;Terrestrial;Forests;Food source and feathers;Unknown
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Psephotus ;pulcherrimus;;Paradise Parrot, Beautiful Parakeet;Australia;Extinct;1927;Reduction in food supply, fire, drought, disease and trapping;Terrestrial;Open savanna;Food source and feathers;Unknown
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Psittacula;exsul;;Newton's Parakeet;Mauritius;Extinct;1800's;Habitat loss and hunting;Terrestrial;Forests;Food source and feathers;Unknown
 CHORDATA;AVES;PSITTACIFORMES;PSITTACIDAE;Psittacula;wardi;;Seychelles Parakeet, Seychelles Parrot;Seychelles;Extinct;1906;Overhunting;Terrestrial;Forests;Food source and feathers;Unknown
-CHORDATA;AVES;STRIGIFORMES;STRIGIDAE;Mascarenotus;grucheti;;Reunion Owl, R�union Owl;R�union;Extinct;1600's;Hunting, deforestation and the depredations of introduced predators;Terrestrial;Forests;Food source;Unknown
+CHORDATA;AVES;STRIGIFORMES;STRIGIDAE;Mascarenotus;grucheti;;Reunion Owl, Réunion Owl;Réunion;Extinct;1600's;Hunting, deforestation and the depredations of introduced predators;Terrestrial;Forests;Food source;Unknown
 CHORDATA;AVES;STRIGIFORMES;STRIGIDAE;Mascarenotus;murivorus;;Rodrigues Owl;Mauritius;Extinct;1700's;Hunting, deforestation and the overhunting;Terrestrial;Forests;Food source;Unknown
 CHORDATA;AVES;STRIGIFORMES;STRIGIDAE;Mascarenotus;sauzieri;;Mauritius Owl;Mauritius;Extinct;1859;Deforestation and hunting;Terrestrial;Forests;Food source;Unknown
 CHORDATA;AVES;STRIGIFORMES;STRIGIDAE;Sceloglaux;albifacies;;Laughing Owl;New Zealand;Extinct;1930's;Unknown;Terrestrial;Open country and forest edge;Food source;Unknown
@@ -361,20 +361,20 @@ CHORDATA;MAMMALIA;CARNIVORA;PHOCIDAE;Monachus;tropicalis;;Caribbean Monk Seal, W
 CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Alcelaphus;buselaphus;buselaphus;Bubal Hartebeest;North Africa;Extinct;1954;Hunting;Terrestrial;Rocky habitats;Food source;Unknown
 CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Bos;primigenius;;Auroch, Uro;Europe: British Isles and southern Scandinavia, to northern Africa, the Middle East, central Asia and India;Extinct;1627;Hunting;Freshwater;Swamp forests e.g. river valleys, and drier forests and open parkland;May have been domesticated, loss of Food;Unknown
 CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Gazella;bilkis;;Queen Of Sheba's Gazelle, Yemen Gazelle;Yemen: mountains near Ta�izz;Extinct;1951;Hunting;Terrestrial;Euphorbia-covered hillsides at altitudes of 1,230 - 2,150 m;Food source ;Unknown
-CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Gazella;saudiya;;Saudi Gazelle   ;Arabian Peninsula;Extinct in the wild;1980's;Over hunting and degradation of habitat;Terrestrial;Acacia, gravel and sandy plains;Major Food source ;Unknown
+CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Gazella;saudiya;;Saudi Gazelle;Arabian Peninsula;Extinct in the wild;1980's;Over hunting and degradation of habitat;Terrestrial;Acacia, gravel and sandy plains;Major Food source ;Unknown
 CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Hippotragus;leucophaeus;;Bluebuck;South Africa: southern coastal areas;Extinct;1799/1800;Hunting;Terrestrial;Unknown;Loss of Food source;Unknown
-CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Kobus ;leche;robertsi;Roberts' Lechwe;Zambia;Extinct;Unknown;Unknown;Terrestrial, Freshwater;Unknown;Food source ;Unknown
+CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Kobus;leche;robertsi;Roberts' Lechwe;Zambia;Extinct;Unknown;Unknown;Terrestrial, Freshwater;Unknown;Food source ;Unknown
 CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Oryx;dammah;;Scimitar-horned oryx;Algeria, Burkina Faso, Chad, Egypt, Libyan Arab Jamahiriya, Mali, Mauritania, Morocco, Niger, Nigeria, Senegal, Sudan, Tunisia, Sahara;Extinct in the wild;1988;Over hunting (for horns), habitat loss, competition with domestic livestock;Terrestrial;Sub-desert, annual grassland, rolling dunes;Horns;Unknown
-CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Ourebia ;ourebi;;Kenya Oribi;Kenya;Extinct;Unknown;Unknown;Terrestrial;Unknown;Food source ;Unknown
-CHORDATA;MAMMALIA;CETARTIODACTYLA;CERVIDAE;Elaphurus;davidianus;;P�re David's Deer, Pere David's Deer;China;Extinct in the wild;2008;Habitat loss and hunting (eaten by Western and Japanese army);Terrestrial;Low-lying grasslands and reed beds;Food source ;Unknown
+CHORDATA;MAMMALIA;CETARTIODACTYLA;BOVIDAE;Ourebia;ourebi;;Kenya Oribi;Kenya;Extinct;Unknown;Unknown;Terrestrial;Unknown;Food source ;Unknown
+CHORDATA;MAMMALIA;CETARTIODACTYLA;CERVIDAE;Elaphurus;davidianus;;Père David's Deer, Pere David's Deer;China;Extinct in the wild;2008;Habitat loss and hunting (eaten by Western and Japanese army);Terrestrial;Low-lying grasslands and reed beds;Food source ;Unknown
 CHORDATA;MAMMALIA;CETARTIODACTYLA;CERVIDAE;Rucervus;schomburgki;;Schomburgk's deer, swamp deer;Thailand, Lao People's Democratic Republic;Extinct;1932;Habitat loss, hunted for antlers ;Terrestrial;Swampy plains with long grass, cane, and shrubs;Unknown;Possible medicinal properties (Antlers found in tradional medicine shop)
 CHORDATA;MAMMALIA;CETARTIODACTYLA;HIPPOPOTAMIDAE;Hippopotamus;madagascariensis;;Madagascan pygmy hippopotamus, common Malagasy hippo;Madagascar: Central highlands;Extinct;Unknown;Habitat modification and hunting;Freshwater;Freshwater rivers;Unknown;Unknown
 CHORDATA;MAMMALIA;CETARTIODACTYLA;HIPPOPOTAMIDAE;Hippopotamus;lemerlei;;Malagasy dwarf hippopotamus, Lemerle's Malagasy hippo;Madagascar;Extinct;Unknown;Habitat modification and hunting;Freshwater;Coastal;Unknown;Unknown
 CHORDATA;MAMMALIA;CHIROPTERA;PHYLLOSTOMIDAE;Desmodus;draculae ;;Giant Vampire Bat;Brazil, Venezuela;Extinct;Unknown;Unknown;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus ;subniger;;Dark flying fox, R�union flying fox, chauvre souris banane;R�union, Mauritius;Extinct;1873;Deforestation and Local Hunting;Terrestrial;Trees and Rocks;Bat Oil;Unknown
-CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus ;brunneus;;Percy Island Flying Fox, Dusky Flying Fox;Australia, Percy Islands and Queensland;Extinct;1874;Habitat Loss;Terrestrial;Unknown;Bat Oil;Unknown
-CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus ;pilosus;;Large Palau flying fox;Palau;Extinct;1874;Hunting for food and habitat loss;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus ;tokudae;;Guam flying fox;Guam;Extinct;1968;Hunting, introduction of the Brown Tree Snake;Terrestrial;Unknown;Food source;Unknown
+CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus;subniger;;Dark flying fox, Réunion flying fox, chauvre souris banane;R�union, Mauritius;Extinct;1873;Deforestation and Local Hunting;Terrestrial;Trees and Rocks;Bat Oil;Unknown
+CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus;brunneus;;Percy Island Flying Fox, Dusky Flying Fox;Australia, Percy Islands and Queensland;Extinct;1874;Habitat Loss;Terrestrial;Unknown;Bat Oil;Unknown
+CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus;pilosus;;Large Palau flying fox;Palau;Extinct;1874;Hunting for food and habitat loss;Terrestrial;Unknown;Food source;Unknown
+CHORDATA;MAMMALIA;CHIROPTERA;PTEROPODIDAE;Pteropus;tokudae;;Guam flying fox;Guam;Extinct;1968;Hunting, introduction of the Brown Tree Snake;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;MAMMALIA;DASYUROMORPHIA;THYLACINIDAE;Thylacinus;cynocephalus;;Thylacine, Tasmanian wolf, Tasmanian tiger;Australia;Extinct;1933;Exterminated to protect sheep populations and introduction of non-native species i.e. dogs;Terrestrial;Open forest or grassland;Unknown;Unknown
 CHORDATA;MAMMALIA;DIDELPHIMORPHIA;DIDELPHIDAE;Cryptonanus ;ignites;;Red-bellied Gracile Mouse Opossum, Red-bellied Gracile Opossum;Argentina: Jujuy;Extinct;1962;Agricultural, technological development, cattle ranching, deforestation;Terrestrial;Unknown;Unknown;Unknown
 CHORDATA;MAMMALIA;DIPROTODONTIA;MACROPODIDAE;Lagorchestes;asomatus;;Central hare-wallaby, pukurl-pukurl;Australia: Lake Mackay ;Extinct;1932;Introduction of non-native species: cats and foxes;Terrestrial;Desert sand plains and dunes with spinifex (Triodia) hummock grassland ;Food source;Unknown
@@ -407,14 +407,14 @@ CHORDATA;MAMMALIA;RODENTIA;CAPROMYIDAE;Isolobodon;portoricensis;;Puerto Rican Hu
 CHORDATA;MAMMALIA;RODENTIA;CAPROMYIDAE;Plagiodontia;ipnaeum;;Samana Hutia;Dominican Republic, Haiti;Extinct;<1500;European settlers.;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CHINCHILLIDAE;Lagostomus;crassus;;Unknown;Peru;Extinct;<1500;Unknown;Terrestrial;Unknown;Unknown;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Juscelinomys;candango;;Candango Mouse;Brazil;Extinct;1960;Habitat destruction e.g. converted to city.;Terrestrial;Unknown;Unknown;Unknown
-CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Megalomys;desmarestii;;Desmarest�s Pilorie, Antillean Giant Rice Rat;Martinique;Extinct;1897;Introduction of mongoose, perhaps eruption of Mt. Pele in 1902;Terrestrial;Forest;Food source;Unknown
+CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Megalomys;desmarestii;;Desmarest's Pilorie, Antillean Giant Rice Rat;Martinique;Extinct;1897;Introduction of mongoose, perhaps eruption of Mt. Pele in 1902;Terrestrial;Forest;Food source;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Megalomys;luciae;;Santa Lucian Pilorie, Santa Lucia Giant Rice Rat;Saint Lucia;Extinct;1881;Presumably mongoose introductions;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Megaoryzomys;curioi;;Galap�gos Giant Rat;Gal�pagos Islands;Extinct;<1500;Numerous invasive species.;Terrestrial;Shrub forest.;Food source;Unknown
+CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Megaoryzomys;curioi;;Galapágos Giant Rat;Galápagos Islands;Extinct;<1500;Numerous invasive species.;Terrestrial;Shrub forest.;Food source;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Neotoma;anthonyi;;Anthony's Woodrat;Mexico: Todos Los Santos Islands in Baja California Norte;Extinct;1926;Predation by feral cats;Terrestrial;Coastal Scrub,  Sea Cliffs and Rocky Offshore Islands;Food source;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Neotoma;bunkeri;;Bunkers Woodrat, Bunker's Woodrat, Coronados Island Woodrat;Mexico: Baja California Sur, Coronados Island;Extinct;1931;Resource competition and predation from feral cats ;Terrestrial;Desert, Temperate.;Food source;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Neotoma;martinensis;;San Martin Island Woodrat;Mexico;Extinct;1950s;Predation by feral cats;Terrestrial;Upper Sonoran life zone, and the coastal scrub, caves and crevices;Unknown;Unknown
-CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Nesoryzomys;darwini;;Darwin's Galapagos Mouse;Gal�pagos Islands;Extinct;1930;The introduction of the black rat (Rattus rattus) ;Terrestrial;Forest, Shrubland and Subtropical Moist Shrubland;Unknown;Unknown
-CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Nesoryzomys;indefessus;;Indefatigable Galapagos Mouse;Gal�pagos Islands;Extinct;1934;The introduction of the black rat (Rattus rattus) ;Terrestrial;Forest, Shrubland and Subtropical Moist Shrubland;Unknown;Unknown
+CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Nesoryzomys;darwini;;Darwin's Galapagos Mouse;Galápagos Islands;Extinct;1930;The introduction of the black rat (Rattus rattus) ;Terrestrial;Forest, Shrubland and Subtropical Moist Shrubland;Unknown;Unknown
+CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Nesoryzomys;indefessus;;Indefatigable Galapagos Mouse;Galápagos Islands;Extinct;1934;The introduction of the black rat (Rattus rattus) ;Terrestrial;Forest, Shrubland and Subtropical Moist Shrubland;Unknown;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Noronhomys;vespuccii;;Unknown;Brazil;Extinct;1503;Unknown;Terrestrial;Beach Dunes;Unknown;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Oligoryzomys;victus;;St Vincent Pygmy Rice Rat, St. Vincent Pygmy Rice Rat;Saint Vincent, Grenadines;Extinct;1892;Black rats, brown rats, and mongoose;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;MAMMALIA;RODENTIA;CRICETIDAE;Oryzomys;antillarum;;Jamaican Rice Rat;Jamaica;Extinct;1877;Introduction of mongoose;Terrestrial;Unknown;Food source;Unknown
@@ -440,7 +440,7 @@ CHORDATA;REPTILA;SQUAMATA;BOIDAE;Bolyeria;multocarinata;;Round Island Burrowing 
 CHORDATA;REPTILA;SQUAMATA;COLUBRIDAE;Alsophis;sanctaecrucis;;Saint Croix Racer;US: Virgin Islands;Extinct;1994;Unknown;Terrestrial;Unknown;Skin;Medicinal properties
 CHORDATA;REPTILA;SQUAMATA;CORDYLIDAE;Tetradactylus;eastwoodae;;Eastwood's Longtailed Seps, Eastwood's Whip Lizard;South Africa: Limpopo Province;Extinct;1913;Excessive burning of habitat;Terrestrial;Montane grassland;Food source;Unknown
 CHORDATA;REPTILA;SQUAMATA;GEKKONIDAE;Hoplodactylus;delcourti;;Unknown;New Zealand;Extinct;1850's;Unknown;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;REPTILA;SQUAMATA;GEKKONIDAE;Phelsuma;gigas;;Gecko Diurne G�ant De Rodrigues, Phelsume De G�ant Rodrigues;Mauritius: Rodrigues;Extinct;1800's;Unknown;Terrestrial;Unknown;Food source;Unknown
+CHORDATA;REPTILA;SQUAMATA;GEKKONIDAE;Phelsuma;gigas;;Gecko Diurne Géant De Rodrigues, Phelsume De Géant Rodrigues;Mauritius: Rodrigues;Extinct;1800's;Unknown;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;REPTILA;SQUAMATA;SCINCIDAE;Leiolopisma;mauritiana;;Unknown;Mauritius;Extinct;1600;Introduction of predatory species;Terrestrial;Unknown;Unknown;Unknown
 CHORDATA;REPTILA;SQUAMATA;SCINCIDAE;Macroscincus;coctei;;Cape Verde Giant Skink, Cocteau's Skink;Cape Verde;Extinct;1900's;Hunting and severe droughts;Terrestrial;Unknown;Food source;Medicinal properties e.g. fat used for medicine.
 CHORDATA;REPTILA;SQUAMATA;SCINCIDAE;Tachygia;microlepis;;Tonga Ground Skink;Tonga;Extinct;1994;Unknown;Terrestrial;Unknown;Food source;Unknown
@@ -451,14 +451,14 @@ CHORDATA;REPTILA;SQUAMATA;TROPIDURIDAE;Leiocephalus;herminieri;;Unknown;Martiniq
 CHORDATA;REPTILA;SQUAMATA;TYPHLOPIDAE;Typhlops;cariei;;Unknown;Mauritius;Extinct;1600's;Introduction of predatory species;Terrestrial;Unknown;Food source, Skin;Unknown
 CHORDATA;REPTILA;TESTUDINES;GEOEMYDIDAE;Cuora;yunnanensis;;Yunnan Box Turtle;China;Extinct;1906;Urbanisation;"Terrestrial; Freshwater";Unknown;Unknown;Unknown
 CHORDATA;REPTILA;TESTUDINES;PELOMEDUSIDAE;Pelusios;seychellensis;;Seychelles Black Terrapin, Seychelles Mud Turtle, Seychelles Terrapin;Seychelles;Extinct;1895;Unknown;"Terrestrial; Freshwater";Unknown;Unknown;Unknown
-CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Cylindraspis;indica;;R�union Giant Tortoise;R�union;Extinct;1800;Unknown;Terrestrial;Unknown;Unknown;Unknown
+CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Cylindraspis;indica;;Réunion Giant Tortoise;R�union;Extinct;1800;Unknown;Terrestrial;Unknown;Unknown;Unknown
 CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Cylindraspis;inepta;;Saddle-backed Mauritius Giant Tortoise;Mauritius;Extinct;1700's;Hunting pressures, introduction of predators and competitive species;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Cylindraspis;peltastes;;Domed Rodrigues Giant Tortoise;Mauritius: Rodrigues;Extinct;1800;Hunting pressures, direct habitat alteration, introduction of predators and competitive species;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Cylindraspis;triserrata;;Domed Mauritius Giant Tortoise;Mauritius;Extinct;1700's;Hunting pressures, direct habitat alteration, introduction of predators and competitive species;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Cylindraspis;vosmaeri;;Saddle-backed Rodrigues Giant Tortoise;Mauritius: Rodrigues;Extinct;1800;Hunting pressures, direct habitat alteration, introduction of predators and competitive species;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Geochelone ;nigra;abingdoni;Abingdon Island Tortoise, Lonesome George;Gal�pagos;Extinct in the wild;1970;Over exploitation and introduced species;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Geochelone ;nigra;duncanensis;Duncan Island Tortoise;Gal�pagos;Extinct in the wild;Unknown;Over exploitation and introduced species;Terrestrial;Unknown;Food source;Unknown
-CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Geochelone ;nigra;galapagoensis;Charles Island Tortoise;Gal�pagos;Extinct;1840's;Over exploitation and introduced species;Terrestrial;Unknown;Food source;Unknown
+CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Geochelone ;nigra;abingdoni;Abingdon Island Tortoise, Lonesome George;Galápagos;Extinct in the wild;1970;Over exploitation and introduced species;Terrestrial;Unknown;Food source;Unknown
+CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Geochelone ;nigra;duncanensis;Duncan Island Tortoise;Galápagos;Extinct in the wild;Unknown;Over exploitation and introduced species;Terrestrial;Unknown;Food source;Unknown
+CHORDATA;REPTILA;TESTUDINES;TESTUDINIDAE;Geochelone ;nigra;galapagoensis;Charles Island Tortoise;Galápagos;Extinct;1840's;Over exploitation and introduced species;Terrestrial;Unknown;Food source;Unknown
 CHORDATA;REPTILA;TESTUDINES;TRIONYCHIDAE;Aspideretes;nigricans;;Black Soft-shell Turtle;Bangladesh;Extinct in the wild;Unknown;Unknown;"Terrestrial; Freshwater";Semi-aquatic;Food source;Unknown
 MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Alasmidonta;mccordi;;Coosa Elktoe;United States:;Extinct;1900's;Unknown;Freshwater;River;Food source ;Unknown
 MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Alasmidonta;robusta;;Carolina Elktoe;United States;Extinct;2002;Habitat loss;Freshwater;River;Food source ;Unknown
@@ -493,7 +493,7 @@ MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Pleurobema;rubellum;;Warrior Pigtoe;United
 MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Pleurobema;taitianum;;Heavy Pigtoe, Judge Tait's Mussel;United States: Alabama, Mississippi, South Carolina;Extinct;1900's;Habitat loss and degradation;Freshwater;River;Food source ;Unknown
 MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Pleurobema;troschelianum;;Alabama Clubshell;United States: Alabama, Georgia, Tennessee;Extinct;1990's;Damming of the Coosa river and pollution;Freshwater;River;Food source ;Unknown
 MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Pleurobema;verum;;True Pigtoe;United States: Alabama;Extinct;Unknown;Unknown;Freshwater;River;Food source ;Unknown
-MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Unio;cariei;;R�union Freshwater Mussel;R�union;Extinct;Unknown;Unknown;Freshwater;River;Food source ;Unknown
+MOLLUSCA;BIVALVIA;UNIONOIDA;UNIONIDAE;Unio;cariei;;Réunion Freshwater Mussel;Réunion;Extinct;Unknown;Unknown;Freshwater;River;Food source ;Unknown
 MOLLUSCA;GASTROPODA;ARCHAEOGASTROPODA;LOTTIDAE;Lottia;alveus;;Eelgrass Limpet;United States;Extinct;1929;Habitat loss;Marine;Eel grass;Food source ;Secretion used to treat skin problems
 MOLLUSCA;GASTROPODA;ARCHAEOGASTROPODA;NACELLIDAE;Collisella;edmitchelli;;Unknown;United States;Extinct;1860's;Unknown;Marine;Unknown;Food source ;Secretion used to treat skin problems
 MOLLUSCA;GASTROPODA;BASOMMATOPHORA;ANCYLIDAE;Rhodacme;filosa;;Wicker Ancylid;United States: Alabama;Extinct;Unknown;Unknown;Freshwater;Unknown;Food source ;Secretion used to treat skin problems
@@ -673,13 +673,13 @@ MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;ENIDAE;Pachnodus ;velutinus;;Unknown;Seychel
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;EUCONULIDAE;Caldwellia;philyrina;;Unknown;Mauritius;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;EUCONULIDAE;Colparion ;madgei;;Unknown;Mauritius: Rodrigues;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;EUCONULIDAE;Ctenoglypta;newtoni;;Unknown;Mauritius;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
-MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;EUCONULIDAE;Dupontia ;proletaria;;Unknown;Mauritius, R�union;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
+MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;EUCONULIDAE;Dupontia ;proletaria;;Unknown;Mauritius, Réunion;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;EUCONULIDAE;Pachystyla;rufozonata;;Unknown;Mauritius;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Advena;campbelli;;Unknown;Norfolk Island;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Diastole ;matafaoi;;Mount Matafao Different Snail;American Samoa;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Erepta;nevilli;;Unknown;Mauritius;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
-MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Harmogenanina ;linophora;;Unknown;Mauritius, R�union;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
-MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Harmogenanina ;subdetecta;;Unknown;R�union;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
+MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Harmogenanina ;linophora;;Unknown;Mauritius, Réunion;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
+MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Harmogenanina ;subdetecta;;Unknown;Réunion;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Nancibella ;quintalia;;Unknown;Norfolk Island;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Panulena ;perrugosa;;Unknown;Norfolk Island;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
 MOLLUSCA;GASTROPODA;STYLOMMATOPHORA;HELICARIONIDAE;Quintalia ;flosculus;;Unknown;Norfolk Island;Extinct;Unknown;Unknown;Terrestrial;Ground dwelling;Unknown;Unknown
