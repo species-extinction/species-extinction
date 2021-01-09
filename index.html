@@ -3,104 +3,82 @@
   <meta charset="utf-8" />
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-
-    .container {
-      border: 2px solid #000;
-      overflow: hidden;
-    }
-
-    .container div {
-      min-height: 200px;
-      padding: 10px;
-    }
-    #map_obselete {
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      padding-bottom: 100%;
-      vertical-align: middle;
-      overflow: hidden;
-    }
-
-    #map {
-      float: left;
-      margin-right: 20px;
-      margin-top: -10%;
-      vertical-align: middle;
-      width: 80%;
-      border-right: 2px solid #000;
-    }
-
-    #infos {
-      overflow: hidden;
-      margin: 10px;
-      border: 2px dashed #ccc;
-      width: 30%;
-      min-height: 170px;
-    }
-
-    #generalInfos {
-      border: 2px dashed #ccc;
-      height: -10%;
-      margin: 0px;
-    }
-    #graph1 {
-      border: 2px dashed #ccc;
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      padding-bottom: 100%;
-      vertical-align: middle;
-      overflow: hidden;
-    }
-    #graph2 {
-      border: 2px dashed #ccc;
-    }
-    .country:hover {
-      fill: #00004c;
-    }
-    .hidden {
-      display: none;
-    }
-    div.tooltip {
-      color: #222;
-      background-color: #fff;
-      padding: 1.5em;
-      text-shadow: #f5f5f5 0 1px 0;
-      border-radius: 2px;
-      opacity: 0.9;
-      position: absolute;
-    }
-    .container {
-      display: flex;
-    }
-  </style>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="src/styles.css" />
 </head>
 
 <body>
-  <div class="container">
-    <button type="button" onclick="changeView()">Click Me!</button>
-    <div id="courbe"></div>
-    <div id="map"></div>
-    <div id="infos">
-      <div id="generalInfos">
-        <h2>Ici on affichera les infos sur le pays sélectionné</h2>
+  <h1>Extinction des animaux (Une courte intro du site ?)</h1>
+  <div class="container" id="content">
+    <!--button type="button" onclick="changeView()">Click Me!</button-->
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#mapContainer" class="nav-link active" data-toggle="tab">
+          MapContainer
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#courbeContainer" class="nav-link" data-toggle="tab">
+          CourbeContainer
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="mapContainer">
+        <div class="container">
+          <div id="map"></div>
+          <div id="infos">
+            <div id="generalInfos">
+              <h4>Ici on affichera les infos sur le pays sélectionné</h4>
+            </div>
+            <!-- Bar de navigation pour basculer entre les graphes-->
+            <div id="graphs">
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a
+                    href="#graph1Container"
+                    class="nav-link active"
+                    data-toggle="tab"
+                  >
+                    Graph 1
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#graph2Container" class="nav-link" data-toggle="tab">
+                    Graph 2
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="graph1Container">
+                  <div id="graph1"></div>
+                </div>
+                <div class="tab-pane fade" id="graph2Container">
+                  <div id="graph2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="graph2"></div>
-      <div id="graph1"></div>
+      <div class="tab-pane fade" id="courbeContainer">
+        <div id="courbe"></div>
+      </div>
     </div>
   </div>
   <script>
     // change de vue entre la map et la courbe
+    /*
     function changeView() {
       if (!document.getElementById("map").hidden) {
         document.getElementById("map").hidden = true;
@@ -112,24 +90,23 @@
         document.getElementById("courbe").hidden = true;
       }
     }
+    */
+    var width = 1500,
+      height = 1500;
 
-    var width = 1152,
-      height = 1152;
-
+    // La carte
     var svg = d3
       .select("#map")
       .append("svg")
-      .attr("viewBox", "0 0 1160 1160")
+      .attr("viewBox", "250 400 1200 1200")
       .attr("preserveAspectRatio", "xMinYMin meet");
-
-    //var zoom = d3.behavior.zoom().scaleExtent([1, 8]).on("zoom", move);
 
     var tooltip = d3
       .select("body")
       .append("div")
       .attr("class", "hidden tooltip");
 
-    // On rajoute un groupe englobant toute la visualisation pour plus tard
+    // On rajoute un groupe englobant toute la visualisation de la carte pour plus tard
     var g = svg.append("g");
 
     // Carte du monde
@@ -158,12 +135,13 @@
 
     var countrySelected;
 
+    // Des variables pour le piechart
     var pieheight = 350;
     var piewidth = 350;
     var piesvg = d3
       .select("#graph1")
       .append("svg")
-      .attr("viewBox", "0 0 500 500")
+      .attr("viewBox", "0 0 350 350")
       .attr("preserveAspectRatio", "xMinYMin meet")
       .append("g")
       .attr(
@@ -173,14 +151,13 @@
 
     // Lolipop chart
     var lolimargin = { top: 10, right: 20, bottom: 50, left: 100 },
-      loliwidth = 400 - lolimargin.left - lolimargin.right,
+      loliwidth = 300 - lolimargin.left - lolimargin.right,
       loliheight = 350 - lolimargin.top - lolimargin.bottom;
 
     var lolisvg = d3
       .select("#graph2")
       .append("svg")
-      .attr("width", loliwidth + lolimargin.left + lolimargin.right)
-      .attr("height", loliheight + lolimargin.top + lolimargin.bottom)
+      .attr("viewBox", "40 0 250 350")
       .append("g")
       .attr(
         "transform",
@@ -255,7 +232,7 @@
       lolisvg.selectAll("line").remove();
       lolisvg.selectAll("circle").remove();
       lolisvg.selectAll("g").remove();
-
+      console.log(data);
       // Add X axis
       var x = d3
         .scaleLinear()
@@ -427,11 +404,11 @@
             countrySelected.attr("stroke-width", 2).attr("stroke", "#00004c");
 
             document.getElementById("generalInfos").innerHTML =
-              "<h2>Selected country : " +
+              "<h4>" +
               d.properties.name +
-              "</h2><ul id='speciesList'></ul><h3>Number of species extincted in this country : " +
+              "</h4><ul id='speciesList'></ul><h5>Number of species extincted in this country : " +
               d.properties.nbspecies +
-              "</h3>";
+              "</h5>";
             // TODO: Ajouter ci-dessous les fonctions pour afficher les graphes
 
             // Compte le nombre d'occurences de chaque cause d'extinction et
@@ -527,7 +504,6 @@
                 return y(d.nb);
               })
           );
-        document.getElementById("courbe").hidden = true;
       });
     });
   </script>
