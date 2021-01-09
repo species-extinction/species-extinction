@@ -1,50 +1,75 @@
-const piemargin = { top: 140, right: 40, bottom: 50, left: 120 },
-  piewidth = 400 - piemargin.left - piemargin.right,
-  pieheight = 400 - piemargin.top - piemargin.bottom;
-
-var tooltip = d3.select("body").append("div").attr("class", "hidden tooltip");
-
-var pieClassificationSvg = d3
-  .select("#graphClassificationContainer")
-  .append("svg")
-  .attr("viewBox", "0 0 250 250")
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .append("g")
-  .attr("transform", "translate(" + piemargin.left + "," + piemargin.top + ")");
-
-pieClassificationSvg
-  .append("text")
-  .attr("x", piewidth / 4 - piemargin.left / 2)
-  .attr("y", -120)
-  .attr("text-anchor", "middle")
-  .attr("font-size", "14px")
-  .style("text-decoration", "underline")
-  .text("differents Classification of extincted species");
-
-// The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
-var radius = Math.min(piewidth, pieheight) / 2 - piemargin;
-
-// Create dummy data
-var data = { a: 9, b: 20, c: 30, d: 8, e: 12 };
-
-// set the color scale
-var piecolor = d3.interpolateRainbow;
-
-// Compute the position of each group on the pie:
-var pie = d3.pie().value(function (d) {
-  return d.value;
-});
-var data_ready = pie(d3.entries(data));
-// Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
-svg
-  .selectAll("whatever")
-  .data(data_ready)
-  .enter()
-  .append("path")
-  .attr("d", d3.arc().innerRadius(0).outerRadius(radius))
-  .attr("fill", function (d) {
-    return piecolor(d.data.key);
-  })
-  .attr("stroke", "black")
-  .style("stroke-width", "2px")
-  .style("opacity", 0.7);
+// ================================================
+// creer le graph qui decrit l'augmentation du nombre d'extinction au cours du temps
+export function drawCurve(data_decade) {
+    // set the dimensions and margins of the graph
+    var margin_c = { top: 10, right: 30, bottom: 100, left: 100 },
+      width_c = 1000 - margin_c.left - margin_c.right,
+      height_c = 500 - margin_c.top - margin_c.bottom;
+  
+    // append the svg object to the body of the page
+    var svg_c = d3
+      .select("#courbe")
+      .append("svg")
+      .attr("width", width_c + margin_c.left + margin_c.right)
+      .attr("height", height_c + margin_c.top + margin_c.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin_c.left + "," + margin_c.top + ")");
+  
+    svg_c
+      .append("text")
+      .attr("x", width_c / 2)
+      .attr("y", margin_c.top)
+      .attr("text-anchor", "middle")
+      .attr("font-size", "16px")
+      .style("text-decoration", "underline")
+      .text("Global number of species extincted over time");
+  
+    // Add X axis --> it is a date format
+    var x = d3
+      .scaleTime()
+      .domain(
+        d3.extent(data_decade, function (d) {
+          return d.date;
+        })
+      )
+      .range([0, width_c]);
+  
+    svg_c
+      .append("g")
+      .attr("transform", "translate(0," + height_c + ")")
+      .call(d3.axisBottom(x));
+  
+    // Add Y axis
+    //TODO: changer les noms de x et y
+    var y = d3
+      .scaleLinear()
+      .domain([
+        0,
+        d3.max(data_decade, function (d) {
+          return d.nb;
+        })
+      ])
+      .range([height_c, 0]);
+  
+    svg_c.append("g").call(d3.axisLeft(y));
+    // Add the area
+    svg_c
+      .append("path")
+      .datum(data_decade)
+      .attr("fill", "#cce5df")
+      .attr("stroke", "#69b3a2")
+      .attr("stroke-width", 1.5)
+      .attr(
+        "d",
+        d3
+          .area()
+          .x(function (d) {
+            return x(d.date);
+          })
+          .y0(y(0))
+          .y1(function (d) {
+            return y(d.nb);
+          })
+      );
+  }
+  
