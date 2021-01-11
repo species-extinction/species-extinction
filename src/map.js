@@ -42,12 +42,31 @@ const color = d3
   ])
   .domain([1, 50]);
 
+//Tentative de légende
+/*
+g.selectAll("rect")
+  .data([1, 50])
+  .enter()
+  .append("rect")
+  .attr("x", (d) => color(d))
+  .attr("y", heightMap - 500)
+  .attr("height", 30)
+  .attr("width", widthMap)
+  .attr("fill", (d) => color(d));
+*/
+
 var countrySelected;
 
 var data_decade = [];
+
 for (var i = 0; i < 20; i++) {
-  data_decade.push({ date: 1820 + 10 * i, nb: 0 });
+  data_decade.push({
+    date: 1820 + 10 * i,
+    nb: 0,
+    extinctionCauses: {}
+  });
 }
+var list_causes = [];
 
 document.getElementById("graphs").style.display = "none";
 
@@ -89,6 +108,10 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
         var d = Math.floor(date / 10) - 182;
         if (d > 0) {
           data_decade[d].nb++;
+          if (list_causes.indexOf(cause) == -1) list_causes.push(cause);
+          if (data_decade[d].extinctionCauses[cause])
+            data_decade[d].extinctionCauses[cause]++;
+          else data_decade[d].extinctionCauses[cause] = 1;
         }
       }
 
@@ -114,6 +137,16 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
       }
     }
     //console.log(jsondata);
+
+    for (var i = 0; i < data_decade.length; i++) {
+      var d = data_decade[i];
+
+      list_causes.forEach((cause) => {
+        if (!data_decade[i].extinctionCauses[cause]) {
+          data_decade[i].extinctionCauses[cause] = 0;
+        }
+      });
+    }
 
     // Draw the countries
     g.selectAll("path")
@@ -161,7 +194,7 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
           "<h4>List of extincted species :</h4><ul id='species'></ul><br />";
         var asterisk = document.createElement("p");
         asterisk.innerHTML =
-          "*Unknown means that the species hasn't a common name, that's why the species name is indicated between parenthesis.";
+          "Note : \"Unknown\" means that the species hasn't a common name, that's why the species name is indicated between parenthesis.";
         document.getElementById("listContainer").appendChild(asterisk);
         printList(d.properties.names, d.properties.species);
 
@@ -189,6 +222,6 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
       .attr("class", "country")
       .attr("d", path);
 
-    drawCurve(data_decade);
+    drawCurve(data_decade, list_causes);
   });
 });
