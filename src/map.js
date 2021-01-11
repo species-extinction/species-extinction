@@ -3,6 +3,7 @@ import { drawPieChart } from "./piechart.js";
 import { drawLoli } from "./lolichart.js";
 import { drawCurve } from "./curve.js";
 import { printList, hideGraphs } from "./list.js";
+import { drawBar } from "./bar.js";
 
 // La carte
 const widthMap = 1500,
@@ -92,6 +93,7 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
       e.properties.names = [];
       e.properties.extinctionCauses = [];
       e.properties.habitats = [];
+      e.properties.phylum = [];
       e.properties.species = [];
     });
 
@@ -117,6 +119,7 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
 
       var cause = csvdata[i].CausesOfExtinction;
       var habitat = csvdata[i].Habitat;
+      var phylum = csvdata[i].Phylum;
       var species = csvdata[i].Species;
       // On parcourt le json
       for (var j = 0; j < jsondata.features.length; j++) {
@@ -133,6 +136,7 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
           }
           // On ajoute le type d'habitat
           jsondata.features[j].properties.habitats.push(habitat);
+          jsondata.features[j].properties.phylum.push(phylum);
         }
       }
     }
@@ -208,6 +212,8 @@ d3.dsv(";", "extinct_species.csv").then(function (csvdata) {
 
         var freqHabitats = frequencies(d.properties.habitats);
         drawLoli(freqHabitats);
+        var freqPhylum = frequencies(d.properties.phylum);
+        drawBar(freqPhylum);
       })
       // On colore la carte en fonction du nombre d'espèces disparues dans chaque pays
       .attr("fill", function (d) {
