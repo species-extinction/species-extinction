@@ -18,6 +18,14 @@ let barsvg = d3
 //.append("g")
 //.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+barsvg
+  .append("text")
+  .attr("x", width / 2)
+  .attr("y", 20)
+  .attr("text-anchor", "middle")
+  .style("text-decoration", "underline")
+  .text("Number of species extincted grouped by their phylum");
+
 var barcolor = d3.interpolateRainbow;
 
 export function drawBar(data) {

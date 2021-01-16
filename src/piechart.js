@@ -1,3 +1,5 @@
+//Piechart inspiré de d3 Graph gallery : https://www.d3-graph-gallery.com/graph/pie_basic.html
+
 const piemargin = { top: 140, right: 40, bottom: 50, left: 120 },
   piewidth = 400 - piemargin.left - piemargin.right,
   pieheight = 400 - piemargin.top - piemargin.bottom;

@@ -7,6 +7,10 @@ body {
   left: 0;
 }
 
+p,
+h1 {
+  margin: 20px;
+}
 .container div {
   min-height: 200px;
   padding: 10px;
@@ -94,4 +98,8 @@ h4 {
 #listContainer p {
   margin-top: -15%;
   font-size: 9px;
+}
+
+#curve text {
+  font-size: 18px;
 }

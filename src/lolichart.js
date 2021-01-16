@@ -1,4 +1,4 @@
-// Lolipop chart
+// Lolipop chart inspiré de d3 graph gallery : https://www.d3-graph-gallery.com/graph/lollipop_horizontal.html
 
 var tooltip = d3.select("body").append("div").attr("class", "hidden tooltip");
 
