@@ -32,7 +32,8 @@ export function drawCurve(data_decade, list_causes) {
     .scaleTime()
     .domain(
       d3.extent(data_decade, function (d) {
-        return d.date;
+        // return new Date(d.date);
+        return d3.timeParse("%Y")(d.date);
       })
     )
     .range([0, width_c]);
@@ -115,7 +116,7 @@ export function drawCurve(data_decade, list_causes) {
       d3
         .area()
         .x(function (d) {
-          return x(d.data[0]);
+          return x(d3.timeParse("%Y")(d.data[0]));
         })
         .y0(function (d) {
           return y(d[0]);
