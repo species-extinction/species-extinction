@@ -28,33 +28,59 @@ var projection = d3
 var path = d3.geoPath().projection(projection);
 
 // Range et Domain pour la coloration de la carte
-const color = d3
-  .scaleQuantize()
-  .range([
-    "#ffffcc",
-    "#ffff7f",
-    "#ffff00",
-    "#ffbf7f",
-    "#ffb266",
-    "#ff8000",
-    "#ff4c4c",
-    "#ff0000",
-    "#7f0000"
-  ])
-  .domain([1, 50]);
+var colorRange = [
+  "#ffffcc",
+  "#ffff7f",
+  "#ffff00",
+  "#ffbf7f",
+  "#ffb266",
+  "#ff8000",
+  "#ff4c4c",
+  "#ff0000",
+  "#b30000",
+  "#7f0000"
+];
 
-//Tentative de légende
-/*
-g.selectAll("rect")
-  .data([1, 50])
+// Scales pour la légende
+const color = d3.scaleQuantize().range(colorRange).domain([1, 50]);
+
+var legendColor = d3
+  .scaleQuantize()
+  .domain(d3.range(0, 1, 1.0 / colorRange.length))
+  .range(colorRange);
+
+// Dessiner la color scale pour la légende
+g.selectAll("legRect")
+  .data(d3.range(0, 1, 1.0 / colorRange.length))
   .enter()
   .append("rect")
-  .attr("x", (d) => color(d))
-  .attr("y", heightMap - 500)
+  .attr("x", (d, i) => i * 50 + widthMap / 2)
+  .attr("y", heightMap - 495)
   .attr("height", 30)
-  .attr("width", widthMap)
-  .attr("fill", (d) => color(d));
-*/
+  .attr("width", 50)
+  .attr("fill", function (d) {
+    return legendColor(d / colorRange.length);
+  })
+  .attr("stroke", "black")
+  .style("stroke-width", "1px")
+  .style("opacity", 0.8);
+
+// Ecrire les labels pour la légende
+g.selectAll("legText")
+  .data(d3.range(0, 50, 5))
+  .enter()
+  .append("text")
+  .attr("x", (d, i) => i * 50 + widthMap / 2)
+  .attr("y", heightMap - 500)
+  .text(function (d) {
+    if (d === 0) {
+      return 1;
+    } else if (d >= 45) {
+      return ">45";
+    } else {
+      return d;
+    }
+  });
 
 var countrySelected;
 

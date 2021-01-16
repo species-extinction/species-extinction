@@ -6,4 +6,6 @@ Projet réalisé par :
 - Yilei Pan
 - Anthony Scriven
 
+# Pour plus d'informations
 
+Pour plus d'informations concernant notre projet, veuillez consulter la page Wiki du repository.

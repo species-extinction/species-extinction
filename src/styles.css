@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.container div {
+  min-height: 200px;
+  padding: 10px;
+}
+
+#content {
+  width: 150%;
+  margin: 5px;
+}
+
+#mapContainer {
+  /*border: 2px dashed #ccc;*/
+  width: 110%;
+}
+
+#map {
+  float: left;
+  margin-right: 20px;
+  margin-top: 0;
+  vertical-align: middle;
+  width: 65%;
+  z-index: 0;
+}
+
+#infos {
+  overflow: hidden;
+  margin-top: -2%;
+  margin-left: 0px;
+  width: 30%;
+  min-height: 170px;
+}
+
+#graphs {
+  margin-top: -35%;
+}
+
+#generalInfos {
+  /*border: 2px dashed #ccc;*/
+  max-height: 100px;
+  margin: 0px;
+}
+#graph1 {
+  /*border: 2px dashed #ccc;*/
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.country:hover {
+  fill: #00004c;
+}
+.hidden {
+  display: none;
+}
+div.tooltip {
+  color: #222;
+  background-color: #fff;
+  padding: 1.5em;
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px;
+  opacity: 0.9;
+  position: absolute;
+}
+
+svg text {
+  font-size: 15px;
+}
+h4 {
+  font-size: 14px;
+}
+
+#species {
+  max-height: 200px;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+#species li {
+  font-size: 12px;
+}
+
+#listContainer p {
+  margin-top: -15%;
+  font-size: 9px;
+}
