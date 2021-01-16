@@ -12,7 +12,7 @@ let barsvg = d3
   .append("svg")
   //.attr("width", width + margin.left + margin.right)
   //.attr("height", height + margin.top + margin.bottom)
-  .attr("viewBox", "-50 0 460 460")
+  .attr("viewBox", "-50 0 460 350")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("margin", 2);
 //.append("g")

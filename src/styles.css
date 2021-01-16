@@ -55,13 +55,23 @@ h1 {
 #graph1 {
   /*border: 2px dashed #ccc;*/
   display: inline-block;
-  position: relative;
   width: 100%;
-  padding-bottom: 100%;
+  padding-bottom: 0px;
   vertical-align: middle;
   overflow: hidden;
 }
 
+.explication {
+  font-size: 9px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#graph2,
+#Classification {
+  margin-top: 0px;
+  padding-top: 0px;
+}
 .country:hover {
   fill: #00004c;
 }

@@ -29,7 +29,12 @@
     <!--button type="button" onclick="changeView()">Click Me!</button-->
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a href="#mapContainer" class="nav-link active" data-toggle="tab">
+        <a href="#introContainer" class="nav-link active" data-toggle="tab">
+          Introduction
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#mapContainer" class="nav-link" data-toggle="tab">
           World Map
         </a>
       </li>
@@ -50,7 +55,25 @@
       </li>
     </ul>
     <div class="tab-content">
-      <div class="tab-pane fade show active" id="mapContainer">
+      <div class="tab-pane fade show active" id="introContainer">
+        This page aims to show people the situations of the extincted species
+        around the world.<br />
+        It contains three main parts:
+        <ul>
+          <li>
+            World Map: The details of the extincted spicies around the world.
+          </li>
+          <li>
+            Overview: The evolution of the number of species extincted over time
+            by causes of extinction.
+          </li>
+          <li>
+            Observations: Some observations we made from the graphs in the
+            previous sections
+          </li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="mapContainer">
         <div class="container">
           <div id="map"></div>
           <div id="infos">
@@ -92,15 +115,31 @@
               <div class="tab-content">
                 <div class="tab-pane fade show active" id="graph1Container">
                   <div id="graph1"></div>
+                  <p class="explication">
+                    *This graph shows the proportion of extinction causes of
+                    extinct species in this region to the total number of
+                    extinctions. You can hover the cursor on the graph to see
+                    the details.
+                  </p>
                 </div>
                 <div class="tab-pane fade" id="graph2Container">
                   <div id="graph2"></div>
+                  <p class="explication">
+                    *This graph shows the statistics of the living environment
+                    of extinct species in this region. You can hover the cursor
+                    in the graph to see the details.
+                  </p>
                 </div>
                 <div class="tab-pane fade" id="listContainer">
                   <div id="speciesList"></div>
                 </div>
                 <div class="tab-pane fade" id="graphClassificationContainer">
                   <div id="Classification"></div>
+                  <p class="explication">
+                    *This graph gives us an onverview of the phylum of all the
+                    extinct species in this region. You can hover the cursor in
+                    the graph to see the details.
+                  </p>
                 </div>
               </div>
             </div>
