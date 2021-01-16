@@ -56,20 +56,40 @@
     </ul>
     <div class="tab-content">
       <div class="tab-pane fade show active" id="introContainer">
-        This page aims to show people the situations of the extincted species
+        This page aims to show people the situation of the extincted species
         around the world.<br />
         It contains three main parts:
         <ul>
           <li>
-            World Map: The details of the extincted spicies around the world.
+            <b>World Map</b>: <br />
+            The details of the extincted spicies around the world, in which you
+            can select a country and select the informations that you are
+            interested in.
+            <br />
+            You can choose to see:
+            <ul>
+              <li>
+                <u>Causes</u>: The proportion of extinction causes of extinct
+                species in this region.
+              </li>
+              <li>
+                <u>Habitats</u>: The statistics of the living environment of
+                extinct species in this region.
+              </li>
+              <li><u>List</u>: The list of extincted species.</li>
+              <li>
+                <u>Classification</u>: The classification of the extinct species
+                by their phylum in the selected region.
+              </li>
+            </ul>
           </li>
           <li>
-            Overview: The evolution of the number of species extincted over time
-            by causes of extinction.
+            <b>Overview</b>: The evolution of the number of species extincted
+            over time by causes of extinction.
           </li>
           <li>
-            Observations: Some observations we made from the graphs in the
-            previous sections
+            <b>Observations</b>: Some observations we made from the graphs in
+            the previous sections
           </li>
         </ul>
       </div>
@@ -127,7 +147,7 @@
                   <p class="explication">
                     *This graph shows the statistics of the living environment
                     of extinct species in this region. You can hover the cursor
-                    in the graph to see the details.
+                    on the green circle to see the details.
                   </p>
                 </div>
                 <div class="tab-pane fade" id="listContainer">
@@ -135,11 +155,12 @@
                 </div>
                 <div class="tab-pane fade" id="graphClassificationContainer">
                   <div id="Classification"></div>
-                  <p class="explication">
+                  <div class="legendClassification"></div>
+                  <!--p class="explication">
                     *This graph gives us an onverview of the phylum of all the
                     extinct species in this region. You can hover the cursor in
                     the graph to see the details.
-                  </p>
+                  </p-->
                 </div>
               </div>
             </div>
@@ -150,7 +171,14 @@
         <div id="curve"></div>
       </div>
       <div class="tab-pane fade" id="Observations">
-        TODO
+        We can see on the world map that the country in which the most species
+        have become extincted is the USA with 241 species.<br />
+        In Australia, there were 41 extinctions, in Tanzania, Uganda and Kenya
+        there were around 40 extinctions and in Mexico 29.<br />
+        Most other country had less than 10 extinctions or we don't have data on
+        them.<br />
+        We can see in the Overview that a lot of spieces have become extincted s
+        in 1960 Introduction of Nile Perch, Water Hyacinth and Pollution
       </div>
       <div class="tab-pane fade" id="Citations">
         <b>Data sources:</b>
@@ -195,6 +223,12 @@
               href="https://www.d3-graph-gallery.com/graph/stackedarea_template.html"
             >
               d3 graph gallery
+            </a>
+          </li>
+          <li>
+            Legends from
+            <a href="https://bl.ocks.org/jkeohan/b8a3a9510036e40d3a4e">
+              jkeohan’s Block
             </a>
           </li>
         </ul>

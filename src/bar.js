@@ -27,6 +27,12 @@ barsvg
   .text("Number of species extincted grouped by their phylum");
 
 var barcolor = d3.interpolateRainbow;
+// Scales pour la légende
+var svgLegend = d3
+  .select(".legendClassification")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", 80);
 
 export function drawBar(data) {
   barsvg.selectAll("rect").remove();
@@ -114,4 +120,44 @@ export function drawBar(data) {
     .on("mouseout", function (event, d) {
       tooltip.classed("hidden", true);
     });
+  console.log(data);
+  // Draw legend
+  //Remove old legends before drawing
+  svgLegend.selectAll("*").remove();
+
+  var legendClassification = svgLegend
+    .selectAll(".legendClassification")
+    .data(Object.entries(data))
+    .enter()
+    .append("g")
+    .attr("class", "legendClassification")
+    .attr("transform", function (d, i) {
+      if (i % 2 === 0) {
+        return "translate(0," + 15 * Math.trunc(i / 2) + ")";
+      } else {
+        return "translate(" + 150 + "," + 15 * Math.trunc(i / 2) + ")";
+      }
+    });
+
+  legendClassification
+    .append("rect")
+    .attr("x", 0)
+    .attr("y", 0)
+    .attr("width", 10)
+    .attr("height", 11)
+    .style("fill", function (d, i) {
+      return barcolor(i / Object.entries(data).length);
+    });
+
+  legendClassification
+    .append("text")
+    .attr("x", 20)
+    .attr("y", 11)
+    //.attr("dy", ".35em")
+    .text(function (d, i) {
+      return d[0];
+    })
+    .attr("class", "textselected")
+    .style("text-anchor", "start")
+    .style("font-size", 12);
 }
