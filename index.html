@@ -34,7 +34,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#mapContainer" class="nav-link" data-toggle="tab">
+        <a href="#mapContainer" id="mapLink" class="nav-link" data-toggle="tab">
           World Map
         </a>
       </li>
@@ -92,6 +92,12 @@
             the previous sections
           </li>
         </ul>
+        <center><input
+          class="btn btn-info"
+          type="button"
+          value="Go to map"
+          onclick="swichToMap();"
+        /><center>
       </div>
       <div class="tab-pane fade" id="mapContainer">
         <div class="container">
@@ -289,4 +295,9 @@
       </div>
     </div>
   </div>
+  <script>
+    function swichToMap() {
+      document.getElementById("mapLink").click();
+    }
+  </script>
 </body>
