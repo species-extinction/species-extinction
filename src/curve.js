@@ -142,26 +142,7 @@ function drawCurve(data_decade, list_causes) {
     .attr("y", -30)
     .text("# of extinction")
     .attr("text-anchor", "start");
-
-  //////////
-  // HIGHLIGHT GROUP //
-  //////////
-
-  // What to do when one group is hovered
-  var highlight = function (d) {
-    console.log(d);
-    // reduce opacity of all groups
-    d3.selectAll(".myArea").style("opacity", 0.1);
-    // expect the one that is hovered
-    d3.select("." + d).style("opacity", 1);
-  };
-
-  // And when it is not hovered anymore
-  var noHighlight = function (d) {
-    d3.selectAll(".myArea").style("opacity", 1);
-  };
-}
-
+  
 // sources:
 // - https://www.d3-graph-gallery.com/graph/stackedarea_template.html
 
