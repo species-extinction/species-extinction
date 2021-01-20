@@ -142,7 +142,7 @@ function drawCurve(data_decade, list_causes) {
     .attr("y", -30)
     .text("# of extinction")
     .attr("text-anchor", "start");
-  
+}
 // sources:
 // - https://www.d3-graph-gallery.com/graph/stackedarea_template.html
 
