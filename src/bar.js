@@ -29,7 +29,7 @@ var svgLegend = d3
   .attr("width", width)
   .attr("height", 80);
 
-export function drawBar(data) {
+function drawBar(data) {
   barsvg.selectAll("rect").remove();
   barsvg.selectAll("g").remove();
 
@@ -156,3 +156,4 @@ export function drawBar(data) {
     .style("text-anchor", "start")
     .style("font-size", 12);
 }
+export {drawBar}

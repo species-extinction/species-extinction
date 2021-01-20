@@ -1,6 +1,6 @@
 // ================================================
 // creer le graph qui decrit l'augmentation du nombre d'extinction au cours du temps
-export function drawCurve(data_decade, list_causes) {
+function drawCurve(data_decade, list_causes) {
   var tooltip = d3.select("body").append("div").attr("class", "hidden tooltip");
 
   // set the dimensions and margins of the graph
@@ -164,3 +164,5 @@ export function drawCurve(data_decade, list_causes) {
 
 // sources:
 // - https://www.d3-graph-gallery.com/graph/stackedarea_template.html
+
+export {drawCurve}
