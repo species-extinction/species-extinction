@@ -115,7 +115,6 @@ function drawBar(data) {
     .on("mouseout", function (event, d) {
       tooltip.classed("hidden", true);
     });
-  console.log(data);
   // Draw legend
   //Remove old legends before drawing
   svgLegend.selectAll("*").remove();
