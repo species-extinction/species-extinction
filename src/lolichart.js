@@ -26,7 +26,7 @@ lolisvg
   .style("text-decoration", "underline")
   .text("Extincted species by habitat type");
 
-export function drawLoli(data) {
+function drawLoli(data) {
   lolisvg.selectAll("line").remove();
   lolisvg.selectAll("circle").remove();
   lolisvg.selectAll("g").remove();
@@ -107,3 +107,4 @@ export function drawLoli(data) {
       tooltip.classed("hidden", true);
     });
 }
+export {drawLoli}
