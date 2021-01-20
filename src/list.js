@@ -1,4 +1,4 @@
-export function printList(name, genus) {
+function printList(name, genus) {
     for (var i = 0; i < genus.length; i++) {
       var species = document.createElement("LI");
       species.innerHTML = name[i] + " - (" + genus[i] + ")";
@@ -6,9 +6,11 @@ export function printList(name, genus) {
     }
 }
   
-export function hideGraphs(data) {
+function hideGraphs(data) {
     document.getElementById("graphs").style.display = "";
     if (data === 0) {
         document.getElementById("graphs").style.display = "none";
     }
 }
+
+export {printList, hideGraphs}
