@@ -6,17 +6,12 @@ var margin = { top: 30, right: 30, bottom: 70, left: 60 },
 var tooltip = d3.select("body").append("div").attr("class", "hidden tooltip");
 
 // append the svg object to the body of the page
-//let text = d3.select("#Classification").append("p").text("oui");
 let barsvg = d3
   .select("#Classification")
   .append("svg")
-  //.attr("width", width + margin.left + margin.right)
-  //.attr("height", height + margin.top + margin.bottom)
   .attr("viewBox", "-50 0 460 350")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("margin", 2);
-//.append("g")
-//.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 barsvg
   .append("text")
