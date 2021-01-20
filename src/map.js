@@ -1,4 +1,3 @@
-import "./styles.css";
 import { drawPieChart } from "./piechart.js";
 import { drawLoli } from "./lolichart.js";
 import { drawCurve } from "./curve.js";
